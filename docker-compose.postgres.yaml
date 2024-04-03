@@ -1,0 +1,19 @@
+version: '3.10'
+
+services:
+  postgres:
+    image: postgres:alpine3.19
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=chvalois
+      - POSTGRES_DB=scraping_db
+    command: ["postgres", "-c", "wal_level=logical"]
+
+
+#docker-compose -f docker-compose.postgres.yaml up -d
+
+

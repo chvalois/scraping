@@ -44,9 +44,9 @@ RUN google-chrome --version
 
 # Install ChromeDriver Windows
 # ENV CHROMEDRIVER_VERSION 123.0.6312.58
-# RUN wget -q "https://storage.googleapis.com/chrome-for-testing-public/${CHROMEDRIVER_VERSION}/win64/chromedriver-win64.zip" -O /tmp/chromedriver.zip \
-#     && unzip /tmp/chromedriver.zip -d /usr/local/bin/ \
-#     && rm /tmp/chromedriver.zip
+#  RUN wget -q "https://storage.googleapis.com/chrome-for-testing-public/${CHROMEDRIVER_VERSION}/win64/chromedriver-win64.zip" -O /tmp/chromedriver.zip \
+#    && unzip /tmp/chromedriver.zip -d /usr/local/bin/ \
+#    && rm /tmp/chromedriver.zip
 
 # Install ChromeDriver Linux
 ENV CHROMEDRIVER_VERSION 123.0.6312.58

@@ -10,7 +10,6 @@ from selenium_stealth import stealth
 from functions.functions import get_details
 
 import re
-import os
 import pandas as pd
 
 from tqdm import tqdm
@@ -50,15 +49,6 @@ options.add_argument('--no-sandbox')
 # disable shared memory usage
 options.add_argument('--disable-dev-shm-usage')
 options.add_argument('--ignore-certificate-errors')
-
-#options.add_argument("--window-size=1920,1080")
-#options.add_argument('--allow-running-insecure-content')
-#options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3')
-#options.add_argument("--disable-gpu")
-
-#ervice = Service(executable_path='/usr/local/bin/chrome-headless-shell-linux64/chrome-headless-shell')
-#service = Service(executable_path='/usr/local/bin/chromedriver-win64/chromedriver.exe')
-#driver = webdriver.Chrome(service=service, options=options)
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
@@ -142,9 +132,6 @@ def daily_scraping(region_dept, start_date, use_vpn=False):
 
         last_published = driver.find_element(By.XPATH, '/html/body/main/div[2]/div/div[1]/section/article[1]/section/div[2]/div[3]/small').text[-10:]
         last_published = datetime.strptime(last_published, "%d/%m/%Y").strftime("%Y-%m-%d")
-
-        # if last_published != today_dt:
-        #     break
 
         if last_published <= start_date:
             break

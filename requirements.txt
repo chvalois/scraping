@@ -5,3 +5,4 @@ tqdm==4.66.2
 nordvpn_switcher==0.3.0
 sqlalchemy==1.4.52
 selenium_stealth==1.0.6
+dbt_bigquery==1.7.7

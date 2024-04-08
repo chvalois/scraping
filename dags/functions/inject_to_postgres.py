@@ -6,7 +6,7 @@ from datetime import datetime
 # Replace the placeholders with your PostgreSQL credentials and database name
 username = 'chvalois'
 password = 'S3cret'
-host = 'localhost'
+host = 'postgres'
 port = '5432'  # default PostgreSQL port is 5432
 database = 'scraping_db'
 
@@ -81,7 +81,7 @@ def add_scraped_data_to_postgresDB(date):
     
     cwd = os.getcwd()
 
-    files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-23:-13] == date)]
+    files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-34:-24] == date)]
     print(files)
 
     df = pd.DataFrame()
@@ -92,5 +92,3 @@ def add_scraped_data_to_postgresDB(date):
     df['date_scraped'] = date
 
     inject_sql(df)
-
-add_scraped_data_to_postgresDB("2024-04-02")

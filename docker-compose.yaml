@@ -160,7 +160,15 @@ services:
       retries: 5
     restart: always
 
-  
+  postgres:
+    image: postgres:alpine3.19
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=chvalois
+      - POSTGRES_DB=scraping_db
+    command: ["postgres", "-c", "wal_level=logical"]
 
 volumes:
   postgres-db-volume:

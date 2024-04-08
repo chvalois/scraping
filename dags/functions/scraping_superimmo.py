@@ -10,6 +10,7 @@ from selenium_stealth import stealth
 from functions.functions import get_details
 
 import re
+import os
 import pandas as pd
 
 from tqdm import tqdm
@@ -95,13 +96,16 @@ def vpn_rotate(settings):
     except:
         pass
 
-def daily_scraping(region_dept, use_vpn=False): 
+def daily_scraping(region_dept, start_date, use_vpn=False): 
 
+    print(f"Scraping {region_dept} ads from {start_date}")
+    
     if use_vpn == True:
         settings=vpn_init()
 
     scraping_dt = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-    today_dt = datetime.now().strftime("%d/%m/%Y")
+    #today_dt = datetime.now().strftime("%d/%m/%Y")
+    today_dt = datetime.now().strftime("%Y-%m-%d")
 
     region_dept_alphanum = re.sub('[^A-Za-z0-9]+', '', region_dept)
     start_url = f'https://www.superimmo.com/achat/{region_dept}?option%5B%5D=old_build&sort=created_at'
@@ -137,8 +141,12 @@ def daily_scraping(region_dept, use_vpn=False):
         driver.get(pages_url)
 
         last_published = driver.find_element(By.XPATH, '/html/body/main/div[2]/div/div[1]/section/article[1]/section/div[2]/div[3]/small').text[-10:]
+        last_published = datetime.strptime(last_published, "%d/%m/%Y").strftime("%Y-%m-%d")
 
-        if last_published != today_dt:
+        # if last_published != today_dt:
+        #     break
+
+        if last_published <= start_date:
             break
 
         for i in tqdm(range(1, 16), leave = False):
@@ -156,7 +164,7 @@ def daily_scraping(region_dept, use_vpn=False):
             df = pd.concat([df, new_row], ignore_index = True)
 
         try:
-            df.to_csv(f'files/df_{region_dept_alphanum}_{scraping_dt}.csv', sep = ";")
+            df.to_csv(f'files/df_{region_dept_alphanum}_{start_date}_{scraping_dt}.csv', sep = ";")
         except Exception as err:
             print(f"Unexpected {err=}, {type(err)=}")
             raise
@@ -166,5 +174,3 @@ def daily_scraping(region_dept, use_vpn=False):
 
     if use_vpn == 1:
         terminate_VPN(instructions=None)
-
-daily_scraping('corse/corse-du-sud')

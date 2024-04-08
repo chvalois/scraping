@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: scraping_ads
+    tables:
+      - name: ads
+        identifier: ads
+        loaded_at_field: ad_date_scraped
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 7, period: day}
+      - name: prix_m2_commune
+        identifier: prix_m2_commune

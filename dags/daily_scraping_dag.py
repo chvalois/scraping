@@ -17,8 +17,7 @@ my_dag = DAG(
 )
 
 
-#today = datetime.now().strftime("%Y-%m-%d")
-today = "2024-04-06"
+today = datetime.now().strftime("%Y-%m-%d")
 
 task_1 = PythonOperator(
     task_id='daily_scraping_creuse_bis',

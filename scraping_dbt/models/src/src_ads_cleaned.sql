@@ -37,4 +37,4 @@ SELECT *
 FROM new_or_updated_ads
 WHERE 
     NOT {{ is_incremental() }}           
-    OR existing_ads.ad_id IS NULL
+    OR ad_id IS NULL

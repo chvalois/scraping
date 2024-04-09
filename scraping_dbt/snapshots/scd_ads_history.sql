@@ -1,7 +1,7 @@
 {% snapshot scd_ads_history %}
 {{
     config(
-        target_schema='DEV',
+        target_schema='scraping_ads',
         unique_key='ad_id',
         strategy='timestamp',
         updated_at='updated_at',

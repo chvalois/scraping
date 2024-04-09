@@ -20,10 +20,10 @@ my_dag = DAG(
 today = datetime.now().strftime("%Y-%m-%d")
 
 task_1 = PythonOperator(
-    task_id='daily_scraping_creuse_bis',
+    task_id='daily_scraping_33',
     python_callable=daily_scraping,
     op_kwargs= {
-        'region_dept': 'limousin/creuse',
+        'region_dept': 'aquitaine/gironde',
         'start_date': today
     },
     dag=my_dag
@@ -31,10 +31,10 @@ task_1 = PythonOperator(
 
 
 task_2 = PythonOperator(
-    task_id='daily_scraping_regiondept_haute-corse',
+    task_id='daily_scraping_42',
     python_callable=daily_scraping,
     op_kwargs= {
-        'region_dept': 'corse/haute-corse',
+        'region_dept': 'aquitaine/landes',
         'start_date': today
     },
     dag=my_dag

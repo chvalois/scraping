@@ -3,17 +3,19 @@ import pandas as pd
 import os
 from datetime import datetime
 
-# Replace the placeholders with your PostgreSQL credentials and database name
-username = 'chvalois'
-password = 'S3cret'
-host = 'postgres'
+username = os.getenv('POSTGRES_USER')
+password = os.getenv('POSTGRES_PASSWORD')
+database = os.getenv('POSTGRES_DB')
+#host = 'postgres'
+host = 'localhost'
 port = '5432'  # default PostgreSQL port is 5432
-database = 'scraping_db'
 
 # Create the database engine
-engine = create_engine(f'postgresql://{username}:{password}@{host}:{port}/{database}')
-
-
+try:
+    engine = create_engine(f'postgresql://{username}:{password}@{host}:{port}/{database}')
+    print('Connection to database succeded')
+except:
+    print('Connection to database failed')
 
 def inject_sql(df):
     now = datetime.now()

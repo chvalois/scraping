@@ -48,3 +48,5 @@ And create a synchronization every day at 9PM
 dbt run
 dbt snapshot
 ```
+
+![2024 04 09 - 6942 - 1615x372](https://github.com/chvalois/scraping/assets/32735527/70978658-fb1e-48ef-bc42-11469812fef1)

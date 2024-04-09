@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: src_ads_cleaned
+    description: Cleaned table containing latest infos about ads for each ad_id
+    columns:
+      - name: ad_id
+        description: Primary key for real estate ads
+        data_type: STRING
+      - name: ad_url
+        data_type: STRING
+        description: ""
+      - name: ad_city
+        description: ""
+        data_type: STRING
+      - name: ad_zipcode
+        description: ""
+        data_type: STRING
+      - name: ad_surface
+        description: ""
+        data_type: INT64
+      - name: ad_nb_bedrooms
+        description: ""
+        data_type: NUMERIC
+      - name: ad_nb_rooms
+        description: ""
+        data_type: INT64
+      - name: ad_price
+        data_type: INT64
+        description: Price of the house or apartment as described in the ads
+      - name: ad_price_sqm
+        description: ""
+        data_type: INT64
+      - name: ad_date_scraped
+        description: ""
+        data_type: DATE
+      - name: ad_published_on
+        description: ""
+        data_type: DATE
+      - name: created_at
+        description: ""
+        data_type: TIMESTAMP
+      - name: updated_at
+        description: ""
+        data_type: TIMESTAMP
+  - name: dim_ads_details
+    columns:
+      - name: ad_id
+        tests:
+          - relationships:
+              to: ref('src_ads_cleaned')
+              field: ad_id

@@ -1,6 +1,7 @@
 # Generate a database of real estate ads
 
-![image](https://github.com/chvalois/scraping/assets/32735527/e087ee8a-3d39-494a-a55e-ec54b6cdc8aa)
+![image](https://github.com/chvalois/scraping/assets/32735527/d16af1eb-3ca4-4ecf-be38-9112ce504135)
+
 
 ## Where do I start?
 

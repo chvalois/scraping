@@ -13,7 +13,7 @@ port = '5432'  # default PostgreSQL port is 5432
 # Create the database engine
 try:
     engine = create_engine(f'postgresql://{username}:{password}@{host}:{port}/{database}')
-    print('Connection to database succeded')
+    print('Connection to database succeeded')
 except:
     print('Connection to database failed')
 
@@ -93,4 +93,10 @@ def add_scraped_data_to_postgresDB(date):
 
     df['date_scraped'] = date
 
-    inject_sql(df)
+    try:
+        inject_sql(df)
+        print('Injection succeeded')
+    except:
+        print('Injection failed')
+
+add_scraped_data_to_postgresDB("2024-04-09")

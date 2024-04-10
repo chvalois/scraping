@@ -106,7 +106,7 @@ def daily_scraping(region_dept, start_date, use_vpn=False):
     # Wait for page to load
     while driver.execute_script("return document.readyState") != "complete":
         pass
-    driver.save_screenshot('start_url.png')
+    driver.save_screenshot('dags/start_url.png')
 
     try:
         button = driver.find_element(By.XPATH, '//*[@id="tarteaucitronPersonalize2"]')
@@ -132,8 +132,9 @@ def daily_scraping(region_dept, start_date, use_vpn=False):
 
         last_published = driver.find_element(By.XPATH, '/html/body/main/div[2]/div/div[1]/section/article[1]/section/div[2]/div[3]/small').text[-10:]
         last_published = datetime.strptime(last_published, "%d/%m/%Y").strftime("%Y-%m-%d")
-
-        if last_published <= start_date:
+        
+        if last_published < start_date:
+            print(f"Task was stopped because publication date of first ad of the page ({last_published}) was anterior to start_date of the task ({start_date})")
             break
 
         for i in tqdm(range(1, 16), leave = False):

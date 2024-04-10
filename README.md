@@ -12,7 +12,7 @@
 docker-compose -f docker-compose.windows.yaml up -d
 
 # Sous Linux
-docker-compose up -d
+docker-compose -f docker-compose.linux.yaml up -d
 ```
 
 ### 2. Connect to the database "scraping_db" and create the table "ads"

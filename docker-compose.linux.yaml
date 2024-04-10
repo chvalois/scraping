@@ -67,6 +67,8 @@ x-airflow-common: &airflow-common
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./files:/opt/airflow/files
+  env_file:
+    - .env
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
   depends_on:
     redis:
@@ -164,10 +166,8 @@ services:
     image: postgres:alpine3.19
     volumes:
       - ~/apps/postgres:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_PASSWORD=S3cret
-      - POSTGRES_USER=chvalois
-      - POSTGRES_DB=scraping_db
+    env_file:
+      - .env
     command: ["postgres", "-c", "wal_level=logical"]
 
 volumes:

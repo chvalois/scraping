@@ -23,24 +23,28 @@ def get_details(url, driver):
     try:
         price = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[2]/section[1]/table/tbody/tr/td[1]').text
         price = re.findall(r'Prix de vente : (\d* *\d+ \d+) €', price)[0]
+        price = int(price.replace(" ", ""))
     except:
         pass
 
     try:
         surface = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[1]/div[1]/div[2]/div/h1/div/div[1]').text
         surface = re.findall(r'(\d+)* m²', surface)[0]
+        surface = int(surface.replace(" ", ""))
     except:
         pass
 
     try:
         nb_pieces = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[1]/div[1]/div[2]/div/h1/div/div[2]/span[1]').text
         nb_pieces = re.findall(r'(\d+)', nb_pieces)[0]
+        nb_pieces = int(nb_pieces.replace(" ", ""))
     except:
         pass
 
     try:
         nb_chambres = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[1]/div[1]/div[2]/div/h1/div/div[3]/span[1]').text
         nb_chambres = re.findall(r'(\d+)', nb_chambres)[0]
+        nb_chambres = int(nb_chambres.replace(" ", ""))
     except:
         pass
 
@@ -58,6 +62,7 @@ def get_details(url, driver):
     try:
         prix_m2 = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[1]/div[1]/ul/li[1]').text
         prix_m2 = re.findall(r'(\d* *\d+) €\/m²', prix_m2)[0]
+        prix_m2 = int(prix_m2.replace(" ", ""))
     except:
         pass
 

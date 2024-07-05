@@ -18,54 +18,6 @@ from datetime import datetime
 import time
 import random
 
-user_agents = [
-    # Add your list of user agents here
-	'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15',
-]
-
-user_agent = random.choice(user_agents)
-
-options = webdriver.ChromeOptions()
-
-# rotate user agent
-options.add_argument(f'user-agent={user_agent}')
-# run in headless mode
-options.add_argument('--headless=new')  # Runs Chrome in headless mode.
-# disable the AutomationControlled feature of Blink rendering engine
-options.add_argument('--disable-blink-features=AutomationControlled')
-# disable pop-up blocking
-options.add_argument('--disable-popup-blocking')
-# start the browser window in maximized mode
-options.add_argument('--start-maximized')
-# disable extensions
-options.add_argument('--disable-extensions')
-# disable sandbox mode
-options.add_argument('--no-sandbox')
-# disable shared memory usage
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--ignore-certificate-errors')
-
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
-# Change the property value of the navigator for webdriver to undefined
-driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": user_agent})
-
-stealth(driver,
-        languages=["fr-FR", "fr"],
-        vendor="Google Inc.",
-        platform="Win32",
-        webgl_vendor="Intel Inc.",
-        renderer="Intel Iris OpenGL Engine",
-        fix_hairline=True,
-        )
-
 from nordvpn_switcher import initialize_VPN,rotate_VPN,terminate_VPN
 
 def vpn_init():
@@ -88,6 +40,55 @@ def vpn_rotate(settings):
         pass
 
 def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False): 
+
+    user_agents = [
+        # Add your list of user agents here
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15',
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15',
+    ]
+
+    user_agent = random.choice(user_agents)
+
+    options = webdriver.ChromeOptions()
+
+    # rotate user agent
+    options.add_argument(f'user-agent={user_agent}')
+    # run in headless mode
+    options.add_argument('--headless=new')  # Runs Chrome in headless mode.
+    # disable the AutomationControlled feature of Blink rendering engine
+    options.add_argument('--disable-blink-features=AutomationControlled')
+    # disable pop-up blocking
+    options.add_argument('--disable-popup-blocking')
+    # start the browser window in maximized mode
+    options.add_argument('--start-maximized')
+    # disable extensions
+    options.add_argument('--disable-extensions')
+    # disable sandbox mode
+    options.add_argument('--no-sandbox')
+    # disable shared memory usage
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--ignore-certificate-errors')
+
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+    # Change the property value of the navigator for webdriver to undefined
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": user_agent})
+
+    stealth(driver,
+            languages=["fr-FR", "fr"],
+            vendor="Google Inc.",
+            platform="Win32",
+            webgl_vendor="Intel Inc.",
+            renderer="Intel Iris OpenGL Engine",
+            fix_hairline=True,
+            )
+
 
     print(f"Scraping {region_dept} ads from {start_date}")
     
@@ -153,6 +154,8 @@ def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False)
                                             'tags': [tags], 'images_url': [images_url]})
 
             df = pd.concat([df, new_row], ignore_index = True)
+
+            time.sleep(3)
 
         try:
             df.to_csv(f'files/df_{dept}_{region_dept_alphanum}_{start_date}_{scraping_dt}.csv', sep = ";")

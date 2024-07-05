@@ -2623,3 +2623,124 @@ SyntaxError: invalid syntax
 [2024-07-05T13:09:09.458+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:09.455+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
 [2024-07-05T13:09:29.880+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:29.799+0000] {logger.py:11} INFO - ====== WebDriver manager ======
 [2024-07-05T13:09:40.720+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:39.473+0000] {timeout.py:68} ERROR - Process timed out, PID: 64423
+[2024-07-05T13:10:16.429+0000] {processor.py:161} INFO - Started process (PID=64572) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:10:16.448+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:10:16.466+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:10:16.449+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:10:46.787+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:10:46.763+0000] {timeout.py:68} ERROR - Process timed out, PID: 64572
+[2024-07-05T13:11:20.407+0000] {processor.py:161} INFO - Started process (PID=64672) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:11:21.002+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:11:21.036+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:11:21.003+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:11:48.273+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:11:48.267+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:11:52.045+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:11:51.326+0000] {timeout.py:68} ERROR - Process timed out, PID: 64672
+[2024-07-05T13:12:26.083+0000] {processor.py:161} INFO - Started process (PID=64765) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:12:26.286+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:12:26.611+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:12:26.496+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:12:56.920+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:12:56.911+0000] {timeout.py:68} ERROR - Process timed out, PID: 64765
+[2024-07-05T13:12:56.921+0000] {logging_mixin.py:188} WARNING - Exception ignored in: <function WeakKeyDictionary.__init__.<locals>.remove at 0x7f43539d10d0>
+[2024-07-05T13:12:56.921+0000] {logging_mixin.py:188} WARNING - Traceback (most recent call last):
+[2024-07-05T13:12:56.921+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.8/weakref.py", line 345, in remove
+[2024-07-05T13:12:56.932+0000] {logging_mixin.py:188} WARNING -     def remove(k, selfref=ref(self)):
+[2024-07-05T13:12:56.932+0000] {logging_mixin.py:188} WARNING -   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-07-05T13:12:56.934+0000] {logging_mixin.py:188} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-07-05T13:12:56.934+0000] {logging_mixin.py:188} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/daily_scraping_dag_33.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.8.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.8.3/best-practices.html#reducing-dag-complexity, PID: 64765
+[2024-07-05T13:12:58.193+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:12:58.192+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:13:02.917+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:13:02.914+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:13:03.029+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:13:03.029+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:13:03.102+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:13:03.102+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T13:13:48.682+0000] {processor.py:161} INFO - Started process (PID=64990) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:13:48.722+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:13:52.445+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:13:49.843+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:14:17.878+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:14:17.872+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:14:23.029+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:14:23.028+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:14:23.246+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:14:23.246+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:14:23.320+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:14:23.320+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T13:14:24.302+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:14:24.301+0000] {timeout.py:68} ERROR - Process timed out, PID: 64990
+[2024-07-05T13:15:07.826+0000] {processor.py:161} INFO - Started process (PID=65274) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:15:07.844+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:15:07.846+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:15:07.845+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:15:37.520+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:15:37.516+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:15:37.873+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:15:37.872+0000] {timeout.py:68} ERROR - Process timed out, PID: 65274
+[2024-07-05T13:16:13.077+0000] {processor.py:161} INFO - Started process (PID=65411) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:16:13.238+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:16:13.396+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:16:13.239+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:16:35.448+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:16:35.445+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:16:38.245+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:16:38.243+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:16:38.557+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:16:38.556+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:16:38.715+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:16:38.714+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T13:16:44.453+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:16:43.956+0000] {timeout.py:68} ERROR - Process timed out, PID: 65411
+[2024-07-05T13:17:28.625+0000] {processor.py:161} INFO - Started process (PID=65650) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:17:28.651+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:17:28.653+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:17:28.652+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:17:51.248+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:17:51.215+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:17:56.677+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:17:56.674+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:17:56.797+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:17:56.797+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T13:17:56.882+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:17:56.882+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T13:17:58.664+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:17:58.663+0000] {timeout.py:68} ERROR - Process timed out, PID: 65650
+[2024-07-05T13:18:47.317+0000] {processor.py:161} INFO - Started process (PID=65801) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:18:47.322+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:18:47.346+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:18:47.343+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:19:20.423+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:19:20.171+0000] {timeout.py:68} ERROR - Process timed out, PID: 65801
+[2024-07-05T13:19:20.621+0000] {logging_mixin.py:188} WARNING - Exception ignored in: <function WeakKeyDictionary.__init__.<locals>.remove at 0x7f43539d10d0>
+[2024-07-05T13:19:20.686+0000] {logging_mixin.py:188} WARNING - Traceback (most recent call last):
+[2024-07-05T13:19:20.693+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.8/weakref.py", line 345, in remove
+[2024-07-05T13:19:20.879+0000] {logging_mixin.py:188} WARNING -     def remove(k, selfref=ref(self)):
+[2024-07-05T13:19:20.879+0000] {logging_mixin.py:188} WARNING -   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-07-05T13:19:20.977+0000] {logging_mixin.py:188} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-07-05T13:19:20.978+0000] {logging_mixin.py:188} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/daily_scraping_dag_33.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.8.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.8.3/best-practices.html#reducing-dag-complexity, PID: 65801
+[2024-07-05T13:19:29.191+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:19:29.188+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:20:06.495+0000] {processor.py:161} INFO - Started process (PID=65959) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:20:06.581+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:20:06.585+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:20:06.582+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:20:37.493+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:20:37.440+0000] {timeout.py:68} ERROR - Process timed out, PID: 65959
+[2024-07-05T13:21:08.856+0000] {processor.py:161} INFO - Started process (PID=66090) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:21:08.858+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:21:08.859+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:21:08.858+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:21:19.571+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:21:19.570+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:21:40.649+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:21:39.870+0000] {timeout.py:68} ERROR - Process timed out, PID: 66090
+[2024-07-05T13:22:53.469+0000] {processor.py:161} INFO - Started process (PID=66175) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:22:53.477+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:22:53.593+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:22:53.478+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:23:44.753+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:23:36.449+0000] {timeout.py:68} ERROR - Process timed out, PID: 66175
+[2024-07-05T13:24:19.444+0000] {processor.py:161} INFO - Started process (PID=66226) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:24:19.483+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:24:19.538+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:24:19.503+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:24:50.165+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:24:50.132+0000] {timeout.py:68} ERROR - Process timed out, PID: 66226
+[2024-07-05T13:25:27.289+0000] {processor.py:161} INFO - Started process (PID=66256) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:25:27.293+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:25:27.299+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:25:27.294+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:26:08.733+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:26:08.725+0000] {timeout.py:68} ERROR - Process timed out, PID: 66256
+[2024-07-05T13:26:39.754+0000] {processor.py:161} INFO - Started process (PID=66295) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:26:39.769+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:26:39.812+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:26:39.770+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:27:20.941+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:27:15.829+0000] {timeout.py:68} ERROR - Process timed out, PID: 66295
+[2024-07-05T13:28:27.140+0000] {processor.py:161} INFO - Started process (PID=66365) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:28:27.168+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:28:27.244+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:28:27.181+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:28:59.533+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:28:58.269+0000] {timeout.py:68} ERROR - Process timed out, PID: 66365
+[2024-07-05T13:29:36.395+0000] {processor.py:161} INFO - Started process (PID=66406) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:29:36.397+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:29:36.491+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:29:36.483+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:31:53.875+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:31:52.973+0000] {timeout.py:68} ERROR - Process timed out, PID: 66406
+[2024-07-05T13:31:54.643+0000] {logging_mixin.py:188} WARNING - Exception ignored in: <function WeakKeyDictionary.__init__.<locals>.remove at 0x7f43539d10d0>
+[2024-07-05T13:32:07.447+0000] {processor.py:161} INFO - Started process (PID=66462) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:32:07.460+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:32:07.465+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:32:07.464+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:32:12.877+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:32:12.870+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:32:47.344+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:32:37.502+0000] {timeout.py:68} ERROR - Process timed out, PID: 66462
+[2024-07-05T13:34:07.915+0000] {processor.py:161} INFO - Started process (PID=66511) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:34:07.920+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:34:07.929+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:34:07.921+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:34:38.539+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:34:38.023+0000] {timeout.py:68} ERROR - Process timed out, PID: 66511
+[2024-07-05T13:35:16.429+0000] {processor.py:161} INFO - Started process (PID=66582) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:35:16.683+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:35:16.708+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:35:16.683+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:37:06.120+0000] {processor.py:161} INFO - Started process (PID=66637) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:37:06.124+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:37:06.129+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:37:06.126+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:37:24.004+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:37:23.989+0000] {logger.py:11} INFO - ====== WebDriver manager ======

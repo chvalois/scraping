@@ -20,16 +20,16 @@ duplicates AS (
     LEFT JOIN
         latest_ads la
     ON
-        s.id = la.id
+        s.ad_id = la.ad_id
         AND s.updated_at = la.latest_updated_at
     WHERE
-        la.id IS NULL
+        la.ad_id IS NULL
 )
 
 SELECT * FROM src_ads
-WHERE (id, updated_at) NOT IN (
+WHERE (ad_id, updated_at) NOT IN (
     SELECT 
-        la.id,
+        la.ad_id,
         la.latest_updated_at
     FROM   
         latest_ads la

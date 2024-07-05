@@ -12102,3 +12102,776 @@ FROM new_or_updated_ads
 [0m12:49:21.456796 [debug] [MainThread]: Command `dbt run` failed at 12:49:21.456678 after 1.52 seconds
 [0m12:49:21.457342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f027a18d7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0277ffb490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0279e8fe50>]}
 [0m12:49:21.457824 [debug] [MainThread]: Flushing usage events
+[0m13:36:47.426039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46714ee0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466fc65af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466fc65880>]}
+
+
+============================== 13:36:47.437618 | d5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d ==============================
+[0m13:36:47.437618 [info ] [MainThread]: Running with dbt=1.8.3
+[0m13:36:47.438946 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/scraping_dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dbt_profiles', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt_profiles', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:36:49.100967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466f304d30>]}
+[0m13:36:49.439416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466fc73400>]}
+[0m13:36:49.441330 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:36:49.739854 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m13:36:51.011515 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:36:51.013277 [debug] [MainThread]: Partial parsing: updated file: scraping_dbt://models/src/src_ads_cleaned.sql
+[0m13:36:52.282708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4685081be0>]}
+[0m13:36:53.162211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4684ed3100>]}
+[0m13:36:53.164599 [info ] [MainThread]: Found 7 models, 1 snapshot, 4 data tests, 1 seed, 2 sources, 531 macros
+[0m13:36:53.165534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46850974c0>]}
+[0m13:36:53.194821 [info ] [MainThread]: 
+[0m13:36:53.196684 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:36:53.227938 [debug] [ThreadPool]: Acquiring new postgres connection 'list_scraping_db'
+[0m13:36:54.962038 [debug] [ThreadPool]: Using postgres connection "list_scraping_db"
+[0m13:36:55.109660 [debug] [ThreadPool]: On list_scraping_db: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "connection_name": "list_scraping_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:36:55.148991 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:36:55.508428 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.359 seconds
+[0m13:36:55.524286 [debug] [ThreadPool]: On list_scraping_db: Close
+[0m13:36:55.528164 [debug] [ThreadPool]: Acquiring new postgres connection 'list_scraping_db_scraping_ads'
+[0m13:36:55.556798 [debug] [ThreadPool]: Using postgres connection "list_scraping_db_scraping_ads"
+[0m13:36:55.558538 [debug] [ThreadPool]: On list_scraping_db_scraping_ads: BEGIN
+[0m13:36:55.559196 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:36:55.626421 [debug] [ThreadPool]: SQL status: BEGIN in 0.067 seconds
+[0m13:36:55.627326 [debug] [ThreadPool]: Using postgres connection "list_scraping_db_scraping_ads"
+[0m13:36:55.628032 [debug] [ThreadPool]: On list_scraping_db_scraping_ads: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "connection_name": "list_scraping_db_scraping_ads"} */
+select
+      'scraping_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'scraping_ads'
+    union all
+    select
+      'scraping_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'scraping_ads'
+    union all
+    select
+      'scraping_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'scraping_ads'
+  
+[0m13:36:55.669573 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.041 seconds
+[0m13:36:55.671427 [debug] [ThreadPool]: On list_scraping_db_scraping_ads: ROLLBACK
+[0m13:36:55.672203 [debug] [ThreadPool]: On list_scraping_db_scraping_ads: Close
+[0m13:36:55.673067 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_scraping_db_scraping_ads, now list_scraping_db_public)
+[0m13:36:55.676551 [debug] [ThreadPool]: Using postgres connection "list_scraping_db_public"
+[0m13:36:55.677132 [debug] [ThreadPool]: On list_scraping_db_public: BEGIN
+[0m13:36:55.677668 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:36:55.693545 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m13:36:55.694543 [debug] [ThreadPool]: Using postgres connection "list_scraping_db_public"
+[0m13:36:55.695455 [debug] [ThreadPool]: On list_scraping_db_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "connection_name": "list_scraping_db_public"} */
+select
+      'scraping_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'scraping_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'scraping_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m13:36:55.704614 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.008 seconds
+[0m13:36:55.707260 [debug] [ThreadPool]: On list_scraping_db_public: ROLLBACK
+[0m13:36:55.708233 [debug] [ThreadPool]: On list_scraping_db_public: Close
+[0m13:36:55.721846 [debug] [MainThread]: Using postgres connection "master"
+[0m13:36:55.722635 [debug] [MainThread]: On master: BEGIN
+[0m13:36:55.723272 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:36:55.745553 [debug] [MainThread]: SQL status: BEGIN in 0.022 seconds
+[0m13:36:55.746435 [debug] [MainThread]: Using postgres connection "master"
+[0m13:36:55.747207 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:36:55.835094 [debug] [MainThread]: SQL status: SELECT 0 in 0.087 seconds
+[0m13:36:55.837172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4684ed30a0>]}
+[0m13:36:55.838612 [debug] [MainThread]: On master: ROLLBACK
+[0m13:36:55.839453 [debug] [MainThread]: Using postgres connection "master"
+[0m13:36:55.839980 [debug] [MainThread]: On master: BEGIN
+[0m13:36:55.840665 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m13:36:55.841200 [debug] [MainThread]: On master: COMMIT
+[0m13:36:55.841714 [debug] [MainThread]: Using postgres connection "master"
+[0m13:36:55.842211 [debug] [MainThread]: On master: COMMIT
+[0m13:36:55.842838 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:36:55.843417 [debug] [MainThread]: On master: Close
+[0m13:36:55.844995 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:36:55.845851 [info ] [MainThread]: 
+[0m13:36:55.886359 [debug] [Thread-1  ]: Began running node model.scraping_dbt.src_ads
+[0m13:36:55.887142 [info ] [Thread-1  ]: 1 of 7 START sql table model public.src_ads .................................... [RUN]
+[0m13:36:55.888076 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_scraping_db_public, now model.scraping_dbt.src_ads)
+[0m13:36:55.888786 [debug] [Thread-1  ]: Began compiling node model.scraping_dbt.src_ads
+[0m13:36:55.909168 [debug] [Thread-1  ]: Writing injected SQL for node "model.scraping_dbt.src_ads"
+[0m13:36:55.914103 [debug] [Thread-1  ]: Began executing node model.scraping_dbt.src_ads
+[0m13:36:56.031277 [debug] [Thread-1  ]: Writing runtime sql for node "model.scraping_dbt.src_ads"
+[0m13:36:56.053845 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads"
+[0m13:36:56.054754 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: BEGIN
+[0m13:36:56.055435 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:36:56.118073 [debug] [Thread-1  ]: SQL status: BEGIN in 0.063 seconds
+[0m13:36:56.118969 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads"
+[0m13:36:56.119822 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads"} */
+
+  
+    
+
+  create  table "scraping_db"."public"."src_ads__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH raw_ads AS (
+    SELECT * FROM "scraping_db"."public"."ads"
+    )
+
+SELECT 
+    RIGHT(url, 6) AS ad_id,
+    url AS ad_url,
+    lieu AS ad_location,
+    /* CASE WHEN lieu = '-' THEN NULL ELSE REGEXP_SUBSTR(lieu, '^([^(]+)') END AS ad_city, /* Old Method */ */
+    /* CASE WHEN lieu = '-' THEN NULL ELSE REGEXP_SUBSTR(lieu, '\(([^)]+)\)') END AS ad_zipcode, /* Old Method */ */
+    /* CASE WHEN lieu = '-' THEN NULL ELSE REGEXP_EXTRACT(lieu, r'^([^(]+)') END AS ad_city, /* For GCP */ */
+    /* CASE WHEN lieu = '-' THEN NULL ELSE REGEXP_EXTRACT(lieu, r'\(([^)]+)\)') END AS ad_zipcode, /* For GCP */ */
+    INITCAP(SPLIT_PART(url, '-', -3)) AS ad_city,
+    SPLIT_PART(url, '-', -2) AS ad_zipcode,
+    surface AS ad_surface,
+    COALESCE(nb_chambres, 0) AS ad_nb_bedrooms,
+    /* IFNULL(nb_chambres, 0) AS ad_nb_bedrooms, /* For GCP */ */
+    nb_pieces AS ad_nb_rooms,
+    CAST(REPLACE(price, ' ', '') AS INTEGER) AS ad_price,
+    CAST(REPLACE(prix_m2, ' ', '') AS INTEGER) AS ad_price_sqm,
+    /* CAST(REPLACE(price, ' ', '') AS INT64) AS ad_price, /* For GCP */ */
+    /* CAST(REPLACE(prix_m2, ' ', '') AS INT64) AS ad_price_sqm, /* For GCP */ */
+    tags AS ad_tags,
+    tag_1 AS ad_tag_1,
+    tag_2 AS ad_tag_2,
+    tag_3 AS ad_tag_3,
+    images_url AS ad_images_url,
+    date_scraped AS ad_date_scraped,
+    TO_DATE(date_publication, 'DD/mm/YYYY') AS ad_published_on,
+    /* PARSE_DATE("%d/%m/%Y", date_publication) AS ad_published_on, /* For GCP */ */
+    CURRENT_TIMESTAMP AS created_at,
+    CURRENT_TIMESTAMP AS updated_at 
+    /* CURRENT_TIMESTAMP() AS created_at,  /* For GCP */ */
+    /* CURRENT_TIMESTAMP() AS updated_at  /* For GCP */ */
+FROM
+    raw_ads
+  );
+  
+[0m13:36:56.220995 [debug] [Thread-1  ]: SQL status: SELECT 195 in 0.100 seconds
+[0m13:36:56.236286 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads"
+[0m13:36:56.237187 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads"} */
+alter table "scraping_db"."public"."src_ads" rename to "src_ads__dbt_backup"
+[0m13:36:56.238776 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:36:56.244148 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads"
+[0m13:36:56.244687 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads"} */
+alter table "scraping_db"."public"."src_ads__dbt_tmp" rename to "src_ads"
+[0m13:36:56.261906 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.017 seconds
+[0m13:36:56.317819 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: COMMIT
+[0m13:36:56.318592 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads"
+[0m13:36:56.319207 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: COMMIT
+[0m13:36:56.333495 [debug] [Thread-1  ]: SQL status: COMMIT in 0.014 seconds
+[0m13:36:56.353108 [debug] [Thread-1  ]: Applying DROP to: "scraping_db"."public"."src_ads__dbt_backup"
+[0m13:36:56.373651 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads"
+[0m13:36:56.387117 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads"} */
+drop table if exists "scraping_db"."public"."src_ads__dbt_backup" cascade
+[0m13:36:56.402877 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.015 seconds
+[0m13:36:56.405908 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads: Close
+[0m13:36:56.415294 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466ee48250>]}
+[0m13:36:56.416326 [info ] [Thread-1  ]: 1 of 7 OK created sql table model public.src_ads ............................... [[32mSELECT 195[0m in 0.52s]
+[0m13:36:56.417483 [debug] [Thread-1  ]: Finished running node model.scraping_dbt.src_ads
+[0m13:36:56.418297 [debug] [Thread-1  ]: Began running node model.scraping_dbt.src_prix_m2
+[0m13:36:56.419085 [info ] [Thread-1  ]: 2 of 7 START sql table model public.src_prix_m2 ................................ [RUN]
+[0m13:36:56.419855 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.scraping_dbt.src_ads, now model.scraping_dbt.src_prix_m2)
+[0m13:36:56.420436 [debug] [Thread-1  ]: Began compiling node model.scraping_dbt.src_prix_m2
+[0m13:36:56.454768 [debug] [Thread-1  ]: Writing injected SQL for node "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.456508 [debug] [Thread-1  ]: Began executing node model.scraping_dbt.src_prix_m2
+[0m13:36:56.462794 [debug] [Thread-1  ]: Writing runtime sql for node "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.487926 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.488734 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: BEGIN
+[0m13:36:56.489304 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:36:56.675221 [debug] [Thread-1  ]: SQL status: BEGIN in 0.186 seconds
+[0m13:36:56.676218 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.676938 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_prix_m2"} */
+
+  
+    
+
+  create  table "scraping_db"."public"."src_prix_m2__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH raw_prix_m2 AS (
+    SELECT * FROM "scraping_db"."public"."prix_m2_commune"
+    )
+
+SELECT 
+    CASE 
+        WHEN LENGTH(CAST(zipcode AS TEXT)) = 4 THEN CONCAT('0', CAST(zipcode AS TEXT))
+        ELSE CAST(zipcode AS TEXT)
+        /* WHEN LENGTH(CAST(zipcode AS STRING)) = 4 THEN CONCAT("0", CAST(zipcode AS STRING))
+        ELSE CAST(zipcode AS STRING) /* For GCP */ */
+        END
+        AS zipcode,
+    city_name,
+    house_type,
+    CAST(prix_m2 AS INTEGER) AS prix_m2
+FROM
+    raw_prix_m2
+  );
+  
+[0m13:36:56.718891 [debug] [Thread-1  ]: SQL status: SELECT 246 in 0.041 seconds
+[0m13:36:56.725038 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.725780 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_prix_m2"} */
+alter table "scraping_db"."public"."src_prix_m2" rename to "src_prix_m2__dbt_backup"
+[0m13:36:56.727036 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:36:56.745262 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.746120 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_prix_m2"} */
+alter table "scraping_db"."public"."src_prix_m2__dbt_tmp" rename to "src_prix_m2"
+[0m13:36:56.755756 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.009 seconds
+[0m13:36:56.758265 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: COMMIT
+[0m13:36:56.758961 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.759522 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: COMMIT
+[0m13:36:56.761160 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m13:36:56.766560 [debug] [Thread-1  ]: Applying DROP to: "scraping_db"."public"."src_prix_m2__dbt_backup"
+[0m13:36:56.767540 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_prix_m2"
+[0m13:36:56.768147 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_prix_m2"} */
+drop table if exists "scraping_db"."public"."src_prix_m2__dbt_backup" cascade
+[0m13:36:56.773063 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.004 seconds
+[0m13:36:56.775331 [debug] [Thread-1  ]: On model.scraping_dbt.src_prix_m2: Close
+[0m13:36:56.776942 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46859bdb20>]}
+[0m13:36:56.778124 [info ] [Thread-1  ]: 2 of 7 OK created sql table model public.src_prix_m2 ........................... [[32mSELECT 246[0m in 0.36s]
+[0m13:36:56.779264 [debug] [Thread-1  ]: Finished running node model.scraping_dbt.src_prix_m2
+[0m13:36:56.779877 [debug] [Thread-1  ]: Began running node model.scraping_dbt.dim_ads_images_url
+[0m13:36:56.780730 [info ] [Thread-1  ]: 3 of 7 START sql table model public.dim_ads_images_url ......................... [RUN]
+[0m13:36:56.781497 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.scraping_dbt.src_prix_m2, now model.scraping_dbt.dim_ads_images_url)
+[0m13:36:56.782259 [debug] [Thread-1  ]: Began compiling node model.scraping_dbt.dim_ads_images_url
+[0m13:36:56.787545 [debug] [Thread-1  ]: Writing injected SQL for node "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:56.789816 [debug] [Thread-1  ]: Began executing node model.scraping_dbt.dim_ads_images_url
+[0m13:36:56.796152 [debug] [Thread-1  ]: Writing runtime sql for node "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:56.797452 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:56.798251 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: BEGIN
+[0m13:36:56.798803 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:36:56.857319 [debug] [Thread-1  ]: SQL status: BEGIN in 0.058 seconds
+[0m13:36:56.858172 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:56.858846 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_images_url"} */
+
+  
+    
+
+  create  table "scraping_db"."public"."dim_ads_images_url__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH src_ads AS (
+    SELECT * FROM "scraping_db"."public"."src_ads"
+    )
+
+SELECT 
+    ad_id, 
+    CASE WHEN ad_image_url = 'None' THEN ad_image_url ELSE REPLACE(ad_image_url, CHR(39), '') END AS ad_image_url    /* CHR(39) is ' */
+FROM
+    src_ads,
+    UNNEST(STRING_TO_ARRAY(REGEXP_REPLACE(ad_images_url, '^\[|\]$', ''), ', ')) AS ad_image_url
+    /* UNNEST(SPLIT(REGEXP_REPLACE(ad_images_url, r'^\[|\]$', ''), ', ')) AS ad_image_url /* For GCP */ */
+  );
+  
+[0m13:36:56.942486 [debug] [Thread-1  ]: SQL status: SELECT 1950 in 0.083 seconds
+[0m13:36:56.953567 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:56.954376 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_images_url"} */
+alter table "scraping_db"."public"."dim_ads_images_url" rename to "dim_ads_images_url__dbt_backup"
+[0m13:36:56.958536 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:36:56.989821 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:56.990625 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_images_url"} */
+alter table "scraping_db"."public"."dim_ads_images_url__dbt_tmp" rename to "dim_ads_images_url"
+[0m13:36:56.991916 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:36:56.994313 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: COMMIT
+[0m13:36:56.994832 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:56.995236 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: COMMIT
+[0m13:36:57.008319 [debug] [Thread-1  ]: SQL status: COMMIT in 0.013 seconds
+[0m13:36:57.013115 [debug] [Thread-1  ]: Applying DROP to: "scraping_db"."public"."dim_ads_images_url__dbt_backup"
+[0m13:36:57.014010 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_images_url"
+[0m13:36:57.014463 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_images_url"} */
+drop table if exists "scraping_db"."public"."dim_ads_images_url__dbt_backup" cascade
+[0m13:36:57.031525 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.016 seconds
+[0m13:36:57.040119 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_images_url: Close
+[0m13:36:57.041049 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466efa24f0>]}
+[0m13:36:57.042086 [info ] [Thread-1  ]: 3 of 7 OK created sql table model public.dim_ads_images_url .................... [[32mSELECT 1950[0m in 0.26s]
+[0m13:36:57.043067 [debug] [Thread-1  ]: Finished running node model.scraping_dbt.dim_ads_images_url
+[0m13:36:57.043805 [debug] [Thread-1  ]: Began running node model.scraping_dbt.dim_ads_tags
+[0m13:36:57.044641 [info ] [Thread-1  ]: 4 of 7 START sql table model public.dim_ads_tags ............................... [RUN]
+[0m13:36:57.045431 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.scraping_dbt.dim_ads_images_url, now model.scraping_dbt.dim_ads_tags)
+[0m13:36:57.046024 [debug] [Thread-1  ]: Began compiling node model.scraping_dbt.dim_ads_tags
+[0m13:36:57.059317 [debug] [Thread-1  ]: Writing injected SQL for node "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.060499 [debug] [Thread-1  ]: Began executing node model.scraping_dbt.dim_ads_tags
+[0m13:36:57.067126 [debug] [Thread-1  ]: Writing runtime sql for node "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.068089 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.068606 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: BEGIN
+[0m13:36:57.069059 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:36:57.127364 [debug] [Thread-1  ]: SQL status: BEGIN in 0.058 seconds
+[0m13:36:57.128105 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.128675 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_tags"} */
+
+  
+    
+
+  create  table "scraping_db"."public"."dim_ads_tags__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH 
+src_ads AS (
+    SELECT * FROM "scraping_db"."public"."src_ads"
+    ),
+
+temp_tags AS (
+SELECT DISTINCT
+    ad_id, 
+    CASE WHEN ad_tag = 'None' THEN ad_tag ELSE REPLACE(ad_tag, CHR(39), '') END AS ad_tag    /* CHR(39) is ' */
+FROM
+    src_ads,
+    UNNEST(STRING_TO_ARRAY(REGEXP_REPLACE(ad_tags, '^\[|\]$', ''), ', ')) AS ad_tag
+    /* UNNEST(SPLIT(REGEXP_REPLACE(ad_tags, r'^\[|\]$', ''), ', ')) AS ad_tag /* For GCP */ */
+
+WHERE 
+    ad_tag != 'None' AND ad_tag != ' '
+
+UNION ALL
+SELECT ad_id, ad_tag_1 AS ad_tag FROM src_ads WHERE ad_tag_1 IS NOT NULL AND ad_tag_1 != 'None'
+
+UNION ALL
+SELECT ad_id, ad_tag_2 AS ad_tag FROM src_ads WHERE ad_tag_2 IS NOT NULL AND ad_tag_2 != 'None'
+
+UNION ALL
+SELECT ad_id, ad_tag_3 AS ad_tag FROM src_ads WHERE ad_tag_3 IS NOT NULL AND ad_tag_3 != 'None'
+)
+
+SELECT DISTINCT 
+    ad_id, 
+    ad_tag
+FROM
+    temp_tags
+ORDER BY 
+    ad_id, 
+    ad_tag
+  );
+  
+[0m13:36:57.226448 [debug] [Thread-1  ]: SQL status: SELECT 1928 in 0.091 seconds
+[0m13:36:57.232662 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.233461 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_tags"} */
+alter table "scraping_db"."public"."dim_ads_tags" rename to "dim_ads_tags__dbt_backup"
+[0m13:36:57.236964 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.003 seconds
+[0m13:36:57.242982 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.243635 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_tags"} */
+alter table "scraping_db"."public"."dim_ads_tags__dbt_tmp" rename to "dim_ads_tags"
+[0m13:36:57.244670 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:36:57.246405 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: COMMIT
+[0m13:36:57.246922 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.247519 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: COMMIT
+[0m13:36:57.254335 [debug] [Thread-1  ]: SQL status: COMMIT in 0.006 seconds
+[0m13:36:57.259445 [debug] [Thread-1  ]: Applying DROP to: "scraping_db"."public"."dim_ads_tags__dbt_backup"
+[0m13:36:57.260497 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_tags"
+[0m13:36:57.261115 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_tags"} */
+drop table if exists "scraping_db"."public"."dim_ads_tags__dbt_backup" cascade
+[0m13:36:57.275369 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.014 seconds
+[0m13:36:57.277778 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_tags: Close
+[0m13:36:57.278713 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466fc651c0>]}
+[0m13:36:57.279690 [info ] [Thread-1  ]: 4 of 7 OK created sql table model public.dim_ads_tags .......................... [[32mSELECT 1928[0m in 0.23s]
+[0m13:36:57.280570 [debug] [Thread-1  ]: Finished running node model.scraping_dbt.dim_ads_tags
+[0m13:36:57.281248 [debug] [Thread-1  ]: Began running node model.scraping_dbt.src_ads_cleaned
+[0m13:36:57.282015 [info ] [Thread-1  ]: 5 of 7 START sql table model public.src_ads_cleaned ............................ [RUN]
+[0m13:36:57.282842 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.scraping_dbt.dim_ads_tags, now model.scraping_dbt.src_ads_cleaned)
+[0m13:36:57.283430 [debug] [Thread-1  ]: Began compiling node model.scraping_dbt.src_ads_cleaned
+[0m13:36:57.288903 [debug] [Thread-1  ]: Writing injected SQL for node "model.scraping_dbt.src_ads_cleaned"
+[0m13:36:57.290313 [debug] [Thread-1  ]: Began executing node model.scraping_dbt.src_ads_cleaned
+[0m13:36:57.297256 [debug] [Thread-1  ]: Writing runtime sql for node "model.scraping_dbt.src_ads_cleaned"
+[0m13:36:57.298667 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned"
+[0m13:36:57.299374 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned: BEGIN
+[0m13:36:57.299979 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:36:57.318795 [debug] [Thread-1  ]: SQL status: BEGIN in 0.019 seconds
+[0m13:36:57.319610 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned"
+[0m13:36:57.320252 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned"} */
+
+  
+    
+
+  create  table "scraping_db"."public"."src_ads_cleaned__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH src_ads AS (
+    SELECT * FROM "scraping_db"."public"."src_ads"
+),
+
+latest_ads AS (
+    SELECT
+        ad_id,
+        MAX(updated_at) AS latest_updated_at
+    FROM
+        src_ads
+    GROUP BY
+        ad_id
+),
+
+duplicates AS (
+    SELECT
+        s.*
+    FROM
+        src_ads s
+    LEFT JOIN
+        latest_ads la
+    ON
+        s.ad_id = la.ad_id
+        AND s.updated_at = la.latest_updated_at
+    WHERE
+        la.ad_id IS NULL
+)
+
+SELECT * FROM src_ads
+WHERE (ad_id, updated_at) NOT IN (
+    SELECT 
+        la.ad_id,
+        la.latest_updated_at
+    FROM   
+        latest_ads la
+)
+  );
+  
+[0m13:36:57.331476 [debug] [Thread-1  ]: SQL status: SELECT 0 in 0.011 seconds
+[0m13:36:57.450605 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned"
+[0m13:36:57.451426 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned"} */
+alter table "scraping_db"."public"."src_ads_cleaned__dbt_tmp" rename to "src_ads_cleaned"
+[0m13:36:57.458789 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.007 seconds
+[0m13:36:57.461258 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned: COMMIT
+[0m13:36:57.462090 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned"
+[0m13:36:57.462759 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned: COMMIT
+[0m13:36:57.464161 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m13:36:57.470356 [debug] [Thread-1  ]: Applying DROP to: "scraping_db"."public"."src_ads_cleaned__dbt_backup"
+[0m13:36:57.471364 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned"
+[0m13:36:57.471963 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned"} */
+drop table if exists "scraping_db"."public"."src_ads_cleaned__dbt_backup" cascade
+[0m13:36:57.481310 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.009 seconds
+[0m13:36:57.483742 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned: Close
+[0m13:36:57.484723 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466eb94c70>]}
+[0m13:36:57.485767 [info ] [Thread-1  ]: 5 of 7 OK created sql table model public.src_ads_cleaned ....................... [[32mSELECT 0[0m in 0.20s]
+[0m13:36:57.486713 [debug] [Thread-1  ]: Finished running node model.scraping_dbt.src_ads_cleaned
+[0m13:36:57.487411 [debug] [Thread-1  ]: Began running node model.scraping_dbt.src_ads_cleaned_backup_incremental
+[0m13:36:57.488343 [info ] [Thread-1  ]: 6 of 7 START sql incremental model public.src_ads_cleaned_backup_incremental ... [RUN]
+[0m13:36:57.489081 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.scraping_dbt.src_ads_cleaned, now model.scraping_dbt.src_ads_cleaned_backup_incremental)
+[0m13:36:57.489818 [debug] [Thread-1  ]: Began compiling node model.scraping_dbt.src_ads_cleaned_backup_incremental
+[0m13:36:57.505341 [debug] [Thread-1  ]: Writing injected SQL for node "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.543163 [debug] [Thread-1  ]: Began executing node model.scraping_dbt.src_ads_cleaned_backup_incremental
+[0m13:36:57.587436 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.588283 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned_backup_incremental"} */
+
+    
+  
+    
+
+  create temporary table "src_ads_cleaned_backup_incremental__dbt_tmp133657578821"
+  
+  
+    as
+  
+  (
+    
+
+WITH src_ads AS (
+    SELECT * FROM "scraping_db"."public"."src_ads"
+),
+
+existing_ads AS (
+    SELECT * FROM "scraping_db"."public"."src_ads"
+    WHERE True
+),
+
+new_or_updated_ads AS (
+    SELECT
+        s.ad_id, 
+        s.ad_url,
+        s.ad_city,
+        s.ad_zipcode,
+        s.ad_surface,
+        s.ad_nb_bedrooms,
+        s.ad_nb_rooms,
+        s.ad_price,
+        s.ad_price_sqm,
+        s.ad_date_scraped,
+        s.ad_published_on,
+        COALESCE(e.created_at, s.updated_at) AS created_at,
+        s.updated_at
+    FROM src_ads s
+    LEFT JOIN existing_ads e ON s.ad_id = e.ad_id
+    )
+
+SELECT * 
+FROM new_or_updated_ads
+/*WHERE 
+    NOT True           
+    OR ad_id IS NULL */
+  );
+  
+  
+[0m13:36:57.588935 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:36:57.704674 [debug] [Thread-1  ]: SQL status: SELECT 195 in 0.116 seconds
+[0m13:36:57.731342 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.732245 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: BEGIN
+[0m13:36:57.733215 [debug] [Thread-1  ]: SQL status: BEGIN in 0.000 seconds
+[0m13:36:57.733821 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.734395 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned_backup_incremental"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'src_ads_cleaned_backup_incremental__dbt_tmp133657578821'
+        
+      order by ordinal_position
+
+  
+[0m13:36:57.809894 [debug] [Thread-1  ]: SQL status: SELECT 13 in 0.075 seconds
+[0m13:36:57.819565 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.820391 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned_backup_incremental"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "scraping_db".INFORMATION_SCHEMA.columns
+      where table_name = 'src_ads_cleaned_backup_incremental'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+[0m13:36:57.855013 [debug] [Thread-1  ]: SQL status: SELECT 13 in 0.034 seconds
+[0m13:36:57.868539 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.869378 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned_backup_incremental"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "scraping_db".INFORMATION_SCHEMA.columns
+      where table_name = 'src_ads_cleaned_backup_incremental'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+[0m13:36:57.907649 [debug] [Thread-1  ]: SQL status: SELECT 13 in 0.023 seconds
+[0m13:36:57.929811 [debug] [Thread-1  ]: Writing runtime sql for node "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.930671 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.931299 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.src_ads_cleaned_backup_incremental"} */
+
+      
+        
+            delete from "scraping_db"."public"."src_ads_cleaned_backup_incremental"
+            where (
+                ad_id) in (
+                select (ad_id)
+                from "src_ads_cleaned_backup_incremental__dbt_tmp133657578821"
+            );
+
+        
+    
+
+    insert into "scraping_db"."public"."src_ads_cleaned_backup_incremental" ("ad_id", "ad_url", "ad_city", "ad_zipcode", "ad_surface", "ad_nb_bedrooms", "ad_nb_rooms", "ad_price", "ad_price_sqm", "ad_date_scraped", "ad_published_on", "created_at", "updated_at")
+    (
+        select "ad_id", "ad_url", "ad_city", "ad_zipcode", "ad_surface", "ad_nb_bedrooms", "ad_nb_rooms", "ad_price", "ad_price_sqm", "ad_date_scraped", "ad_published_on", "created_at", "updated_at"
+        from "src_ads_cleaned_backup_incremental__dbt_tmp133657578821"
+    )
+  
+[0m13:36:57.948499 [debug] [Thread-1  ]: SQL status: INSERT 0 195 in 0.016 seconds
+[0m13:36:57.950777 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: COMMIT
+[0m13:36:57.951420 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.src_ads_cleaned_backup_incremental"
+[0m13:36:57.952120 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: COMMIT
+[0m13:36:57.954008 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m13:36:57.955203 [debug] [Thread-1  ]: On model.scraping_dbt.src_ads_cleaned_backup_incremental: Close
+[0m13:36:57.956138 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466eb94c70>]}
+[0m13:36:57.957135 [info ] [Thread-1  ]: 6 of 7 OK created sql incremental model public.src_ads_cleaned_backup_incremental  [[32mINSERT 0 195[0m in 0.47s]
+[0m13:36:57.958093 [debug] [Thread-1  ]: Finished running node model.scraping_dbt.src_ads_cleaned_backup_incremental
+[0m13:36:57.958772 [debug] [Thread-1  ]: Began running node model.scraping_dbt.dim_ads_details
+[0m13:36:57.959656 [info ] [Thread-1  ]: 7 of 7 START sql table model public.dim_ads_details ............................ [RUN]
+[0m13:36:57.960480 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.scraping_dbt.src_ads_cleaned_backup_incremental, now model.scraping_dbt.dim_ads_details)
+[0m13:36:57.960940 [debug] [Thread-1  ]: Began compiling node model.scraping_dbt.dim_ads_details
+[0m13:36:57.965506 [debug] [Thread-1  ]: Writing injected SQL for node "model.scraping_dbt.dim_ads_details"
+[0m13:36:57.967072 [debug] [Thread-1  ]: Began executing node model.scraping_dbt.dim_ads_details
+[0m13:36:57.972340 [debug] [Thread-1  ]: Writing runtime sql for node "model.scraping_dbt.dim_ads_details"
+[0m13:36:57.973238 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_details"
+[0m13:36:57.973930 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_details: BEGIN
+[0m13:36:57.974403 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:36:57.996367 [debug] [Thread-1  ]: SQL status: BEGIN in 0.022 seconds
+[0m13:36:57.997078 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_details"
+[0m13:36:57.997586 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_details: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_details"} */
+
+  
+    
+
+  create  table "scraping_db"."public"."dim_ads_details__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH src_ads_cleaned AS (
+    SELECT * FROM "scraping_db"."public"."src_ads_cleaned"
+)
+
+SELECT 
+    ad_id,
+    ad_url,
+    ad_city,
+    ad_zipcode,
+    ad_nb_bedrooms,
+    ad_nb_rooms,
+    ad_date_scraped AS ad_last_date_scraped,
+    ad_published_on AS ad_last_published_on,
+    created_at,
+    updated_at
+FROM
+    src_ads_cleaned
+  );
+  
+[0m13:36:58.005929 [debug] [Thread-1  ]: SQL status: SELECT 0 in 0.008 seconds
+[0m13:36:58.026416 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_details"
+[0m13:36:58.027176 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_details: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_details"} */
+alter table "scraping_db"."public"."dim_ads_details__dbt_tmp" rename to "dim_ads_details"
+[0m13:36:58.050367 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.022 seconds
+[0m13:36:58.052741 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_details: COMMIT
+[0m13:36:58.053471 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_details"
+[0m13:36:58.054083 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_details: COMMIT
+[0m13:36:58.055695 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m13:36:58.065140 [debug] [Thread-1  ]: Applying DROP to: "scraping_db"."public"."dim_ads_details__dbt_backup"
+[0m13:36:58.066353 [debug] [Thread-1  ]: Using postgres connection "model.scraping_dbt.dim_ads_details"
+[0m13:36:58.067103 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_details: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "scraping_dbt", "target_name": "dev", "node_id": "model.scraping_dbt.dim_ads_details"} */
+drop table if exists "scraping_db"."public"."dim_ads_details__dbt_backup" cascade
+[0m13:36:58.076097 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.008 seconds
+[0m13:36:58.078600 [debug] [Thread-1  ]: On model.scraping_dbt.dim_ads_details: Close
+[0m13:36:58.079434 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5dd0f09-4f0b-4b26-973b-ef5cd4c8ce7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466eb94c70>]}
+[0m13:36:58.080513 [info ] [Thread-1  ]: 7 of 7 OK created sql table model public.dim_ads_details ....................... [[32mSELECT 0[0m in 0.12s]
+[0m13:36:58.081573 [debug] [Thread-1  ]: Finished running node model.scraping_dbt.dim_ads_details
+[0m13:36:58.083695 [debug] [MainThread]: Using postgres connection "master"
+[0m13:36:58.084394 [debug] [MainThread]: On master: BEGIN
+[0m13:36:58.084998 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:36:58.122304 [debug] [MainThread]: SQL status: BEGIN in 0.037 seconds
+[0m13:36:58.123129 [debug] [MainThread]: On master: COMMIT
+[0m13:36:58.123710 [debug] [MainThread]: Using postgres connection "master"
+[0m13:36:58.124214 [debug] [MainThread]: On master: COMMIT
+[0m13:36:58.124916 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:36:58.125470 [debug] [MainThread]: On master: Close
+[0m13:36:58.126249 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:36:58.126781 [debug] [MainThread]: Connection 'list_scraping_db' was properly closed.
+[0m13:36:58.127324 [debug] [MainThread]: Connection 'model.scraping_dbt.dim_ads_details' was properly closed.
+[0m13:36:58.138357 [info ] [MainThread]: 
+[0m13:36:58.139150 [info ] [MainThread]: Finished running 6 table models, 1 incremental model in 0 hours 0 minutes and 4.93 seconds (4.93s).
+[0m13:36:58.141302 [debug] [MainThread]: Command end result
+[0m13:36:58.233276 [info ] [MainThread]: 
+[0m13:36:58.234110 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:36:58.234683 [info ] [MainThread]: 
+[0m13:36:58.235817 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m13:36:58.295715 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.101972, "process_user_time": 4.714625, "process_kernel_time": 13.791455, "process_mem_max_rss": "116520", "process_in_blocks": "299664", "process_out_blocks": "3656"}
+[0m13:36:58.310205 [debug] [MainThread]: Command `dbt run` succeeded at 13:36:58.309940 after 11.12 seconds
+[0m13:36:58.310994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466fe06490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f466eae5d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f467010e040>]}
+[0m13:36:58.311646 [debug] [MainThread]: Flushing usage events

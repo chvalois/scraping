@@ -17,11 +17,19 @@ docker-compose -f docker-compose.linux.yaml up -d
 
 ### 2. Connect to the database "scraping_db" and create the table "ads"
 
-Connect to the database (for example, through VS Code extension "PostgreSQL Explorer")
+```
+docker container exec -it airflow_scheduler psql -h postgres-db -U chvalois -d scraping_db -f files/project_init_sql.pgsql
+docker container exec -it airflow_scheduler psql -h postgres-db -U chvalois -f files/metabase_init_sql.pgsql
 
-Execute the queries inside the file "project_init_sql.pgsql" : 
-  - this will create the table "ads"
-  - and setup the database so that it can be connected to Airbyte as a source
+```
+
+cd scraping_dbt
+dbt seed # to add seeds to database
+ALTER TABLE src_ads_cleaned REPLICA IDENTITY FULL;
+
+dbt seed --profiles-dir /opt/airflow/dbt_profiles
+dbt run --profiles-dir /opt/airflow/dbt_profiles
+
 
 ### 3. Create a dataset in Google Big Query
 

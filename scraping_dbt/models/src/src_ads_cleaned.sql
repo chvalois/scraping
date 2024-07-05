@@ -1,40 +1,32 @@
-{{
-  config(
-    materialized='incremental',
-    unique_key='ad_id'
-  )
-}}
-
 WITH src_ads AS (
     SELECT * FROM {{ ref("src_ads") }}
 ),
 
-existing_ads AS (
-    SELECT * FROM src_ads
-    WHERE {{ is_incremental() }}
+WITH latest_ads AS (
+    SELECT
+        ad_id,
+        MAX(updated_at) AS latest_updated_at
+    FROM
+        src_ads
+    GROUP BY
+        ad_id
 ),
 
-new_or_updated_ads AS (
+duplicates AS (
     SELECT
-        s.ad_id, 
-        s.ad_url,
-        s.ad_city,
-        s.ad_zipcode,
-        s.ad_surface,
-        s.ad_nb_bedrooms,
-        s.ad_nb_rooms,
-        s.ad_price,
-        s.ad_price_sqm,
-        s.ad_date_scraped,
-        s.ad_published_on,
-        COALESCE(e.created_at, s.updated_at) AS created_at,
-        s.updated_at
-    FROM src_ads s
-    LEFT JOIN existing_ads e ON s.ad_id = e.ad_id
-    )
+        s.*
+    FROM
+        src_ads s
+    LEFT JOIN
+        latest_ads la
+    ON
+        s.id = la.id
+        AND s.updated_at = la.latest_updated_at
+    WHERE
+        la.id IS NULL
+)
 
-SELECT * 
-FROM new_or_updated_ads
-WHERE 
-    NOT {{ is_incremental() }}           
-    OR ad_id IS NULL
+DELETE FROM src_ads
+USING duplicates
+WHERE src_ads.id = duplicates.id
+AND your_table_name.updated_at = duplicates.updated_at;

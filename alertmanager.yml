@@ -1,0 +1,28 @@
+global:
+  smtp_from: "recofilm.project@gmail.com"
+  smtp_smarthost: "smtp.gmail.com:587"
+  smtp_auth_username: "recofilm.project@gmail.com"
+  smtp_auth_password: "dlik ojij hwaa zeej"
+  smtp_require_tls: true
+
+route:
+  group_by: ["alertname"]
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 3h
+  receiver: "default-receiver"
+
+receivers:
+  - name: "default-receiver"
+    email_configs:
+      - to: "recofilm.project@gmail.com"
+  - name: "admin"
+    email_configs:
+      - to: "recofilm.project@gmail.com"
+
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'operation'
+    equal: ['alertname', 'dev', 'instance']

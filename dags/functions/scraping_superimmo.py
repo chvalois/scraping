@@ -7,7 +7,8 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium_stealth import stealth
 
-from functions.functions import get_details
+from functions.scraping_superimmo_functions import get_details
+#from scraping_superimmo_functions import get_details
 
 import re
 import pandas as pd
@@ -86,7 +87,7 @@ def vpn_rotate(settings):
     except:
         pass
 
-def daily_scraping(region_dept, start_date, use_vpn=False): 
+def daily_scraping(region_dept, start_date, nb_pages="max", use_vpn=False): 
 
     print(f"Scraping {region_dept} ads from {start_date}")
     
@@ -94,7 +95,6 @@ def daily_scraping(region_dept, start_date, use_vpn=False):
         settings=vpn_init()
 
     scraping_dt = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-    #today_dt = datetime.now().strftime("%d/%m/%Y")
     today_dt = datetime.now().strftime("%Y-%m-%d")
 
     region_dept_alphanum = re.sub('[^A-Za-z0-9]+', '', region_dept)
@@ -114,7 +114,10 @@ def daily_scraping(region_dept, start_date, use_vpn=False):
     except:
         pass
 
-    max_pages = int(driver.find_element(By.XPATH, '//*[@id="pjax-container"]/div[2]/nav/ul/li[10]/a').text)
+    if nb_pages != "max":
+        max_pages = nb_pages + 1
+    else:
+        max_pages = int(driver.find_element(By.XPATH, '//*[@id="pjax-container"]/div[2]/nav/ul/li[10]/a').text)
 
     df = pd.DataFrame()
 
@@ -162,3 +165,7 @@ def daily_scraping(region_dept, start_date, use_vpn=False):
 
     if use_vpn == 1:
         terminate_VPN(instructions=None)
+
+
+if __name__ == "__main__":
+    daily_scraping("aquitaine/gironde", "2024-07-03", nb_pages = 1)

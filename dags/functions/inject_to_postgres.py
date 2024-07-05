@@ -6,8 +6,8 @@ from datetime import datetime
 username = os.getenv('POSTGRES_USER')
 password = os.getenv('POSTGRES_PASSWORD')
 database = os.getenv('POSTGRES_DB')
-#host = 'postgres'
-host = 'localhost'
+host = 'postgres-db'
+#host = 'localhost'
 port = '5432'  # default PostgreSQL port is 5432
 
 # Create the database engine
@@ -99,4 +99,3 @@ def add_scraped_data_to_postgresDB(date):
     except:
         print('Injection failed')
 
-add_scraped_data_to_postgresDB("2024-04-09")

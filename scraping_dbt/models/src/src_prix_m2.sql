@@ -1,11 +1,13 @@
 WITH raw_prix_m2 AS (
-    SELECT * FROM {{ source('scraping_ads', 'prix_m2_commune')}}
+    SELECT * FROM {{ source('scraping_db', 'prix_m2_commune')}}
     )
 
 SELECT 
     CASE 
-        WHEN LENGTH(CAST(zipcode AS STRING)) = 4 THEN CONCAT("0", CAST(zipcode AS STRING))
-        ELSE CAST(zipcode AS STRING)
+        WHEN LENGTH(CAST(zipcode AS TEXT)) = 4 THEN CONCAT('0', CAST(zipcode AS TEXT))
+        ELSE CAST(zipcode AS TEXT)
+        /* WHEN LENGTH(CAST(zipcode AS STRING)) = 4 THEN CONCAT("0", CAST(zipcode AS STRING))
+        ELSE CAST(zipcode AS STRING) /* For GCP */ */
         END
         AS zipcode,
     city_name,

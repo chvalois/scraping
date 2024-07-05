@@ -1,0 +1,13 @@
+# profil for superimmo scraping project
+scraping_dbt:
+  outputs:
+    dev:
+      type: postgres
+      host: postgres-db
+      user: chvalois
+      password: S3cret
+      port: 5432
+      dbname: scraping_db
+      schema: public
+  target: dev
+

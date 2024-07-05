@@ -1,0 +1,21 @@
+groups:
+  - name: monitoring_group
+    rules:
+      - alert: PostgresDB is down
+        expr: pg_up{instance="postgres-db"} == 0
+        labels:
+          severity: critical
+        annotations:
+          summary: "Our Postgres DB is down"
+      - alert: PrometheusDown
+        expr: up{job="prometheus"} == 0
+        labels:
+          severity: operation
+        annotations:
+          summary: "Our Prometheus Server is down"
+      - alert: NodeDown
+        expr: up{job="node-exporter"} == 0
+        labels:
+          severity: critical
+        annotations:
+          summary: "The Node server is down"

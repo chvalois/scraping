@@ -1,6 +1,8 @@
 version: 2
 sources:
-  - name: scraping_ads
+  - name: scraping_db
+    database: scraping_db
+    schema: public
     tables:
       - name: ads
         identifier: ads

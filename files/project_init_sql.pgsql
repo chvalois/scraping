@@ -1,0 +1,30 @@
+CREATE TABLE ads (
+    description TEXT
+);
+
+ALTER TABLE ads ADD COLUMN tag_1 TEXT;
+ALTER TABLE ads ADD COLUMN nb_pieces INTEGER;
+ALTER TABLE ads ADD COLUMN date_publication TEXT;
+ALTER TABLE ads ADD COLUMN price TEXT;
+ALTER TABLE ads ADD COLUMN nb_chambres FLOAT;
+ALTER TABLE ads ADD COLUMN lieu TEXT;
+ALTER TABLE ads ADD COLUMN tag_2 TEXT;
+ALTER TABLE ads ADD COLUMN prix_m2 TEXT;
+ALTER TABLE ads ADD COLUMN images_url TEXT;
+ALTER TABLE ads ADD COLUMN tag_3 TEXT;
+ALTER TABLE ads ADD COLUMN tags TEXT;
+ALTER TABLE ads ADD COLUMN url TEXT;
+ALTER TABLE ads ADD COLUMN surface INTEGER;
+ALTER TABLE ads ADD COLUMN date_scraped DATE;
+ALTER TABLE ads ADD COLUMN created_at TIMESTAMP;
+ALTER TABLE ads ADD COLUMN updated_at TIMESTAMP;
+
+GRANT USAGE ON SCHEMA public TO chvalois;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO chvalois;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO chvalois;
+ALTER USER chvalois REPLICATION;
+
+SELECT * FROM pg_create_logical_replication_slot('scraping_db_replica', 'pgoutput');
+
+CREATE PUBLICATION my_publication FOR ALL TABLES;
+SELECT * FROM pg_publication_tables WHERE pubname = 'my_publication';

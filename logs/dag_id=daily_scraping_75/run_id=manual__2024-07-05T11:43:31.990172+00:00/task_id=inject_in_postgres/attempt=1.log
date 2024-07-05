@@ -1,0 +1,29 @@
+[2024-07-05T11:50:20.160+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_scraping_75.inject_in_postgres manual__2024-07-05T11:43:31.990172+00:00 [queued]>
+[2024-07-05T11:50:20.167+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_scraping_75.inject_in_postgres manual__2024-07-05T11:43:31.990172+00:00 [queued]>
+[2024-07-05T11:50:20.167+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-05T11:50:20.179+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): inject_in_postgres> on 2024-07-05 11:43:31.990172+00:00
+[2024-07-05T11:50:20.184+0000] {standard_task_runner.py:60} INFO - Started process 12509 to run task
+[2024-07-05T11:50:20.186+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_scraping_75', 'inject_in_postgres', 'manual__2024-07-05T11:43:31.990172+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/daily_scraping_dag_75.py', '--cfg-path', '/tmp/tmpu6lqjvur']
+[2024-07-05T11:50:20.188+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask inject_in_postgres
+[2024-07-05T11:50:20.199+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-05T11:50:20.224+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_scraping_75.inject_in_postgres manual__2024-07-05T11:43:31.990172+00:00 [running]> on host 596f6ace9042
+[2024-07-05T11:50:20.277+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_scraping_75' AIRFLOW_CTX_TASK_ID='inject_in_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-07-05T11:43:31.990172+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-05T11:43:31.990172+00:00'
+[2024-07-05T11:50:20.278+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/functions/inject_to_postgres.py", line 86, in add_scraped_data_to_postgresDB
+    files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-34:-24] == date) & (f.split("_")[1]) == str(dept)]
+  File "/opt/airflow/dags/functions/inject_to_postgres.py", line 86, in <listcomp>
+    files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-34:-24] == date) & (f.split("_")[1]) == str(dept)]
+TypeError: unsupported operand type(s) for &: 'bool' and 'str'
+[2024-07-05T11:50:20.286+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=daily_scraping_75, task_id=inject_in_postgres, execution_date=20240705T114331, start_date=20240705T115020, end_date=20240705T115020
+[2024-07-05T11:50:20.295+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task inject_in_postgres (unsupported operand type(s) for &: 'bool' and 'str'; 12509)
+[2024-07-05T11:50:20.318+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-05T11:50:20.335+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

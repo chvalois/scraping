@@ -1,0 +1,75 @@
+[2024-07-05T13:01:38.295+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_scraping_75.daily_scraping_75 manual__2024-07-05T13:01:36.214917+00:00 [queued]>
+[2024-07-05T13:01:38.303+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_scraping_75.daily_scraping_75 manual__2024-07-05T13:01:36.214917+00:00 [queued]>
+[2024-07-05T13:01:38.303+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-05T13:01:38.318+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): daily_scraping_75> on 2024-07-05 13:01:36.214917+00:00
+[2024-07-05T13:01:38.324+0000] {standard_task_runner.py:60} INFO - Started process 60712 to run task
+[2024-07-05T13:01:38.326+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_scraping_75', 'daily_scraping_75', 'manual__2024-07-05T13:01:36.214917+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/daily_scraping_dag_75.py', '--cfg-path', '/tmp/tmp83z6afj1']
+[2024-07-05T13:01:38.328+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask daily_scraping_75
+[2024-07-05T13:01:38.341+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-05T13:01:38.371+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_scraping_75.daily_scraping_75 manual__2024-07-05T13:01:36.214917+00:00 [running]> on host 596f6ace9042
+[2024-07-05T13:01:38.430+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_scraping_75' AIRFLOW_CTX_TASK_ID='daily_scraping_75' AIRFLOW_CTX_EXECUTION_DATE='2024-07-05T13:01:36.214917+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-05T13:01:36.214917+00:00'
+[2024-07-05T13:01:38.431+0000] {logging_mixin.py:188} INFO - Scraping ile-de-france/paris ads from 2024-07-05
+[2024-07-05T13:01:44.459+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/299 [00:00<?, ?it/s]
+[2024-07-05T13:01:44.945+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/15 [00:00<?, ?it/s]
+[2024-07-05T13:01:44.946+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:01:48.770+0000] {logging_mixin.py:188} WARNING -   7%|6         | 1/15 [00:03<00:53,  3.82s/it]
+[2024-07-05T13:01:48.770+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:01:51.650+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 2/15 [00:06<00:42,  3.27s/it]
+[2024-07-05T13:01:51.650+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:01:56.793+0000] {logging_mixin.py:188} WARNING -  20%|##        | 3/15 [00:11<00:49,  4.12s/it]
+[2024-07-05T13:01:56.793+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:01.311+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 4/15 [00:16<00:47,  4.28s/it]
+[2024-07-05T13:02:01.312+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:05.290+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 5/15 [00:20<00:41,  4.17s/it]
+[2024-07-05T13:02:05.291+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:09.383+0000] {logging_mixin.py:188} WARNING -  40%|####      | 6/15 [00:24<00:37,  4.14s/it]
+[2024-07-05T13:02:09.384+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:12.787+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 7/15 [00:27<00:31,  3.90s/it]
+[2024-07-05T13:02:12.787+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:16.426+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 8/15 [00:31<00:26,  3.82s/it]
+[2024-07-05T13:02:16.428+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:20.595+0000] {logging_mixin.py:188} WARNING -  60%|######    | 9/15 [00:35<00:23,  3.93s/it]
+[2024-07-05T13:02:20.595+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:24.253+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 10/15 [00:39<00:19,  3.84s/it]
+[2024-07-05T13:02:24.254+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:26.757+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 11/15 [00:41<00:13,  3.43s/it]
+[2024-07-05T13:02:26.757+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:30.172+0000] {logging_mixin.py:188} WARNING -  80%|########  | 12/15 [00:45<00:10,  3.43s/it]
+[2024-07-05T13:02:30.172+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:35.224+0000] {logging_mixin.py:188} WARNING -  87%|########6 | 13/15 [00:50<00:07,  3.92s/it]
+[2024-07-05T13:02:35.226+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:38.818+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 14/15 [00:53<00:03,  3.82s/it]
+[2024-07-05T13:02:38.818+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING - 100%|##########| 15/15 [00:56<00:00,  3.41s/it]
+[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING -                                                
+[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:41.289+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/299 [00:56<4:42:15, 56.83s/it]
+[2024-07-05T13:02:41.965+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/15 [00:00<?, ?it/s]
+[2024-07-05T13:02:41.966+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:45.067+0000] {logging_mixin.py:188} WARNING -   7%|6         | 1/15 [00:03<00:43,  3.10s/it]
+[2024-07-05T13:02:45.068+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:51.023+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 2/15 [00:09<01:02,  4.78s/it]
+[2024-07-05T13:02:51.024+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:02:55.756+0000] {logging_mixin.py:188} WARNING -  20%|##        | 3/15 [00:13<00:57,  4.76s/it]
+[2024-07-05T13:02:55.756+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:03:06.866+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 4/15 [00:24<01:19,  7.26s/it]
+[2024-07-05T13:03:06.867+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:03:24.090+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 5/15 [00:42<01:48, 10.85s/it]
+[2024-07-05T13:03:24.091+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:03:34.552+0000] {logging_mixin.py:188} WARNING -  40%|####      | 6/15 [00:52<01:36, 10.73s/it]
+[2024-07-05T13:03:34.553+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:03:52.053+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 7/15 [01:10<01:43, 12.94s/it]
+[2024-07-05T13:03:52.054+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:03:56.529+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 8/15 [01:14<01:11, 10.25s/it]
+[2024-07-05T13:03:56.530+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:04:00.757+0000] {logging_mixin.py:188} WARNING -  60%|######    | 9/15 [01:18<00:50,  8.37s/it]
+[2024-07-05T13:04:00.759+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:04:17.310+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 10/15 [01:35<00:54, 10.89s/it]
+[2024-07-05T13:04:17.335+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:04:51.842+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 11/15 [02:09<01:12, 18.13s/it]
+[2024-07-05T13:04:51.843+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:05:53.568+0000] {logging_mixin.py:188} WARNING -  80%|########  | 12/15 [03:11<01:34, 31.37s/it]
+[2024-07-05T13:05:53.586+0000] {logging_mixin.py:188} WARNING - 
+[2024-07-05T13:07:18.895+0000] {logging_mixin.py:188} WARNING -  87%|########6 | 13/15 [04:36<01:35, 47.73s/it]
+[2024-07-05T13:07:18.896+0000] {logging_mixin.py:188} WARNING - 

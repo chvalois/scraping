@@ -1,0 +1,16 @@
+[2024-07-05T12:49:02.618+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_scraping_75.inject_in_postgres manual__2024-07-05T11:43:31.990172+00:00 [queued]>
+[2024-07-05T12:49:02.624+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_scraping_75.inject_in_postgres manual__2024-07-05T11:43:31.990172+00:00 [queued]>
+[2024-07-05T12:49:02.624+0000] {taskinstance.py:2193} INFO - Starting attempt 4 of 4
+[2024-07-05T12:49:02.635+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): inject_in_postgres> on 2024-07-05 11:43:31.990172+00:00
+[2024-07-05T12:49:02.639+0000] {standard_task_runner.py:60} INFO - Started process 47256 to run task
+[2024-07-05T12:49:02.642+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_scraping_75', 'inject_in_postgres', 'manual__2024-07-05T11:43:31.990172+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/daily_scraping_dag_75.py', '--cfg-path', '/tmp/tmpweqhfh68']
+[2024-07-05T12:49:02.644+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask inject_in_postgres
+[2024-07-05T12:49:02.657+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-05T12:49:02.683+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_scraping_75.inject_in_postgres manual__2024-07-05T11:43:31.990172+00:00 [running]> on host 596f6ace9042
+[2024-07-05T12:49:02.743+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_scraping_75' AIRFLOW_CTX_TASK_ID='inject_in_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-07-05T11:43:31.990172+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-05T11:43:31.990172+00:00'
+[2024-07-05T12:49:02.745+0000] {logging_mixin.py:188} INFO - ['df_75_iledefranceparis_2024-07-05_2024-07-05-11-43-33.csv']
+[2024-07-05T12:49:02.806+0000] {logging_mixin.py:188} INFO - Injection failed
+[2024-07-05T12:49:02.807+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-05T12:49:02.815+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=daily_scraping_75, task_id=inject_in_postgres, execution_date=20240705T114331, start_date=20240705T124902, end_date=20240705T124902
+[2024-07-05T12:49:02.854+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-05T12:49:02.868+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

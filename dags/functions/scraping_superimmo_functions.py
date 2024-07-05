@@ -34,13 +34,13 @@ def get_details(url, driver):
 
     try:
         nb_pieces = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[1]/div[1]/div[2]/div/h1/div/div[2]/span[1]').text
-        nb_pieces = re.findall(r'(\d+)* pièces*', nb_pieces)[0]
+        nb_pieces = re.findall(r'(\d+)', nb_pieces)[0]
     except:
         pass
 
     try:
         nb_chambres = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[1]/div[1]/div[2]/div/h1/div/div[3]/span[1]').text
-        nb_chambres = re.findall(r'(\d+)* chambres*', nb_chambres)[0]
+        nb_chambres = re.findall(r'(\d+)', nb_chambres)[0]
     except:
         pass
 

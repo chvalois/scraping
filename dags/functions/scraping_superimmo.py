@@ -87,7 +87,7 @@ def vpn_rotate(settings):
     except:
         pass
 
-def daily_scraping(region_dept, start_date, nb_pages="max", use_vpn=False): 
+def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False): 
 
     print(f"Scraping {region_dept} ads from {start_date}")
     
@@ -155,7 +155,7 @@ def daily_scraping(region_dept, start_date, nb_pages="max", use_vpn=False):
             df = pd.concat([df, new_row], ignore_index = True)
 
         try:
-            df.to_csv(f'files/df_{region_dept_alphanum}_{start_date}_{scraping_dt}.csv', sep = ";")
+            df.to_csv(f'files/df_{dept}_{region_dept_alphanum}_{start_date}_{scraping_dt}.csv', sep = ";")
         except Exception as err:
             print(f"Unexpected {err=}, {type(err)=}")
             raise
@@ -168,4 +168,4 @@ def daily_scraping(region_dept, start_date, nb_pages="max", use_vpn=False):
 
 
 if __name__ == "__main__":
-    daily_scraping("aquitaine/gironde", "2024-07-03", nb_pages = 1)
+    daily_scraping(33, "aquitaine/gironde", "2024-07-03", nb_pages = 1)

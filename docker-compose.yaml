@@ -1,0 +1,239 @@
+version: "3"
+
+services:
+
+  postgres-airflow:
+    image: postgres:13
+    container_name: postgres-airflow
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+    ports:
+      - "5432:5432"
+
+  airflow-init:
+    image: chvalois/scraping:v0.6.linux
+    container_name: airflow_init
+    restart: on-failure
+    depends_on:
+      - postgres-airflow
+      - postgres-db
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: tIQHaUSQW7Ic4SbQBKoOtEm4WvuU6_go5-1QVt6lKGI=
+      PYTHONPATH: /opt/airflow
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./files:/opt/airflow/files
+      - ./scraping_dbt:/opt/airflow/scraping_dbt
+      - ./dbt_profiles:/opt/airflow/dbt_profiles
+    entrypoint: |
+      bash -c "
+      airflow db init &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com
+      "
+    networks:
+      - mynetwork
+
+  airflow-webserver:
+    image: chvalois/scraping:v0.6.linux
+    container_name: airflow_webserver
+    restart: always
+    depends_on:
+      - postgres-airflow
+      - postgres-db
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: tIQHaUSQW7Ic4SbQBKoOtEm4WvuU6_go5-1QVt6lKGI=
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+      AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: 'true'
+      PYTHONPATH: /opt/airflow
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./files:/opt/airflow/files
+      - ./scraping_dbt:/opt/airflow/scraping_dbt
+      - ./dbt_profiles:/opt/airflow/dbt_profiles
+    ports:
+      - "8080:8080"
+    entrypoint: /bin/bash -c "pip install pytest && airflow webserver"
+    networks:
+      - mynetwork
+
+  airflow-scheduler:
+    image: chvalois/scraping:v0.6.linux
+    container_name: airflow_scheduler
+    restart: always
+    depends_on:
+      - postgres-airflow
+      - postgres-db
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: tIQHaUSQW7Ic4SbQBKoOtEm4WvuU6_go5-1QVt6lKGI=
+      PYTHONPATH: /opt/airflow
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./files:/opt/airflow/files
+      - ./scraping_dbt:/opt/airflow/scraping_dbt
+      - ./dbt_profiles:/opt/airflow/dbt_profiles
+    entrypoint: /bin/bash -c "pip install pytest && airflow scheduler"
+    networks:
+      - mynetwork
+
+  postgres-db:
+    container_name: postgres-db
+    image: postgres:alpine3.19
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - "5433:5432"
+    command: ["postgres", "-c", "wal_level=logical"]
+    networks:
+      - mynetwork
+
+  postgres-metabase:
+    container_name: postgres-metabase
+    hostname: postgres-metabase
+    image: postgres:alpine3.19
+    environment:
+      POSTGRES_USER: metabase
+      POSTGRES_DB: metabase
+      POSTGRES_PASSWORD: metabase
+    ports:
+      - "5434:5432"
+    networks:
+      - mynetwork
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4:8.0
+    env_file:
+      - .env
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres-db
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+      - ./pgadmin:/var/lib/pgadmin/storage
+    networks:
+      - mynetwork
+
+  metabase:
+    container_name: metabase
+    image: metabase/metabase:latest
+    ports:
+      - "3002:3000"
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: metabase
+      MB_DB_HOST: postgres-metabase
+    healthcheck:
+      test: curl --fail -I http://localhost:3000/api/health || exit 1
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      - postgres-db
+    volumes:
+      - metabase_data:/metabase-data
+    networks:
+      - mynetwork
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+      - "8081:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /sys:/sys
+      - /var/lib/docker:/var/lib/docker
+    networks:
+      - mynetwork
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node_exporter
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
+    ports:
+      - "9100:9100"
+    networks:
+      - mynetwork
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    volumes:
+      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    ports:
+      - "9093:9093"
+    networks:
+      - mynetwork
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus_docker
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus_rules.yml:/etc/prometheus/prometheus_rules.yml
+    networks:
+      - mynetwork
+    ports:
+      - "9090:9090"
+    depends_on:
+      - alertmanager
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana_docker
+    ports:
+      - "3001:3000"
+    networks:
+      - mynetwork
+    depends_on:
+      - prometheus
+    volumes:
+      - ./grafana/dashboards/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yml
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+      - ./grafana/datasources/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
+
+volumes:
+  postgres-db-volume:
+  pgadmin_data:
+  metabase_data:
+
+networks:
+  mynetwork:
+    driver: bridge

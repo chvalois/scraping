@@ -2,7 +2,7 @@ WITH src_ads AS (
     SELECT * FROM {{ ref("src_ads") }}
 ),
 
-WITH latest_ads AS (
+latest_ads AS (
     SELECT
         ad_id,
         MAX(updated_at) AS latest_updated_at
@@ -26,7 +26,11 @@ duplicates AS (
         la.id IS NULL
 )
 
-DELETE FROM src_ads
-USING duplicates
-WHERE src_ads.id = duplicates.id
-AND your_table_name.updated_at = duplicates.updated_at;
+SELECT * FROM src_ads
+WHERE (id, updated_at) NOT IN (
+    SELECT 
+        la.id,
+        la.latest_updated_at
+    FROM   
+        latest_ads la
+)

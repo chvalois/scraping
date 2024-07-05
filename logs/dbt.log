@@ -1,0 +1,14 @@
+[0m09:32:34.424368 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:32:34.430251 | e367849d-7822-433f-be69-54229aff4d69 ==============================
+[0m09:32:34.430251 [info ] [MainThread]: Running with dbt=1.8.3
+[0m09:32:34.430848 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'True', 'log_path': 'logs', 'profiles_dir': '/opt/airflow/dbt_profiles', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt_profiles --debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:32:34.431454 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:32:34.432307 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.056607608, "process_user_time": 1.417421, "process_kernel_time": 0.626859, "process_mem_max_rss": "126068", "process_out_blocks": "8", "command_success": false, "process_in_blocks": "0"}
+[0m09:32:34.432931 [debug] [MainThread]: Command `dbt run` failed at 09:32:34.432824 after 0.06 seconds
+[0m09:32:34.433368 [debug] [MainThread]: Flushing usage events

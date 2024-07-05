@@ -77,13 +77,13 @@ def check_table(table_name):
 #add_columns_to_table(df, "ads")
 #inject_sql()
 
-def add_scraped_data_to_postgresDB(date):
+def add_scraped_data_to_postgresDB(dept, date):
     """ Adds scraped data of the day to POSTGRESQL database
     """
     
     cwd = os.getcwd()
 
-    files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-34:-24] == date)]
+    files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-34:-24] == date) & (f.split("_")[1] == str(dept))]
     print(files)
 
     df = pd.DataFrame()
@@ -98,4 +98,5 @@ def add_scraped_data_to_postgresDB(date):
         print('Injection succeeded')
     except:
         print('Injection failed')
+        raise Exception()
 

@@ -1,0 +1,88 @@
+[2024-07-05T11:38:59.391+0000] {processor.py:161} INFO - Started process (PID=5725) to work on /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:38:59.392+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag copy.py for tasks to queue
+[2024-07-05T11:38:59.392+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:38:59.392+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:38:59.772+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:38:59.772+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T11:38:59.891+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:38:59.891+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:38:59.952+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:38:59.951+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:39:00.008+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:00.008+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T11:39:00.327+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T11:39:00.333+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_75' retrieved from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:39:00.413+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:00.413+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:daily_scraping_75
+[2024-07-05T11:39:00.421+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:00.420+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:daily_scraping_75
+[2024-07-05T11:39:00.425+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:00.425+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:daily_scraping_75
+[2024-07-05T11:39:00.425+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:00.425+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T11:39:00.433+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:00.433+0000] {dag.py:3069} INFO - Creating ORM DAG for daily_scraping_75
+[2024-07-05T11:39:00.441+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:00.441+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_75 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T11:39:00.455+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag copy.py took 1.066 seconds
+[2024-07-05T11:39:29.512+0000] {processor.py:161} INFO - Started process (PID=6098) to work on /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:39:29.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag copy.py for tasks to queue
+[2024-07-05T11:39:29.514+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:29.513+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:39:29.889+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:29.889+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T11:39:30.010+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:30.009+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:39:30.072+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:30.072+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:39:30.129+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:30.129+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T11:39:30.495+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T11:39:30.502+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_75' retrieved from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:39:30.582+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:30.582+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T11:39:30.597+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:39:30.597+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_75 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T11:39:30.612+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag copy.py took 1.103 seconds
+[2024-07-05T11:40:00.648+0000] {processor.py:161} INFO - Started process (PID=6408) to work on /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:40:00.650+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag copy.py for tasks to queue
+[2024-07-05T11:40:00.651+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:00.650+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:40:01.025+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:01.024+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T11:40:01.153+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:01.152+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:40:01.211+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:01.211+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:40:01.269+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:01.268+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T11:40:01.637+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T11:40:01.643+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_75' retrieved from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:40:01.662+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:01.662+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T11:40:01.678+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:01.678+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_75 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T11:40:01.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag copy.py took 1.046 seconds
+[2024-07-05T11:40:31.773+0000] {processor.py:161} INFO - Started process (PID=6703) to work on /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:40:31.774+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag copy.py for tasks to queue
+[2024-07-05T11:40:31.775+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:31.774+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:40:32.154+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:32.153+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T11:40:32.276+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:32.275+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:40:32.334+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:32.334+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:40:32.390+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:32.390+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T11:40:32.725+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T11:40:32.731+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_75' retrieved from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:40:32.750+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:32.750+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T11:40:32.767+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:40:32.766+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_75 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T11:40:32.781+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag copy.py took 1.011 seconds
+[2024-07-05T11:41:02.909+0000] {processor.py:161} INFO - Started process (PID=7010) to work on /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:41:02.913+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag copy.py for tasks to queue
+[2024-07-05T11:41:02.914+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:02.914+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:41:03.294+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:03.294+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T11:41:03.416+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:03.416+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:41:03.457+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:03.457+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:41:03.514+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:03.514+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T11:41:03.839+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T11:41:03.846+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_75' retrieved from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:41:03.863+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:03.863+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T11:41:03.880+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:03.880+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_75 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T11:41:03.893+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag copy.py took 0.986 seconds
+[2024-07-05T11:41:34.028+0000] {processor.py:161} INFO - Started process (PID=7310) to work on /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:41:34.028+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag copy.py for tasks to queue
+[2024-07-05T11:41:34.029+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:34.029+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:41:34.414+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:34.414+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T11:41:34.534+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:34.534+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:41:34.593+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:34.593+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:41:34.630+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:34.630+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T11:41:34.972+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T11:41:34.978+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_75' retrieved from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:41:34.997+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:34.996+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T11:41:35.012+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:41:35.012+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_75 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T11:41:35.025+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag copy.py took 1.000 seconds
+[2024-07-05T11:42:05.156+0000] {processor.py:161} INFO - Started process (PID=7608) to work on /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:42:05.158+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag copy.py for tasks to queue
+[2024-07-05T11:42:05.159+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:42:05.159+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:42:05.529+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:42:05.529+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T11:42:05.654+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:42:05.653+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:42:05.716+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:42:05.715+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2024-07-05T11:42:05.773+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:42:05.773+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T11:42:06.124+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T11:42:06.131+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_75' retrieved from /opt/airflow/dags/daily_scraping_dag copy.py
+[2024-07-05T11:42:06.150+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:42:06.150+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T11:42:06.167+0000] {logging_mixin.py:188} INFO - [2024-07-05T11:42:06.166+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_75 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T11:42:06.180+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag copy.py took 1.027 seconds

@@ -1,5 +1,9 @@
 # Generate a database of real estate ads
 
+This project enables to generate a whole automatically updated real estate ads database.
+The final goal is to be able to analyze the evolution of the real estate market using Metabase.
+
+Here is how it works: 
 ![image](https://github.com/chvalois/scraping/assets/32735527/228926fe-5e4e-4312-bf71-7ed08e508f66)
 
 

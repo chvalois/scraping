@@ -7621,3 +7621,67 @@ IndexError: tuple index out of range
 [2024-07-05T18:35:29.435+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:35:29.435+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2024-07-05T18:35:29.578+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:35:29.578+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
 [2024-07-05T18:35:29.590+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.503 seconds
+[2024-07-05T18:35:59.673+0000] {processor.py:161} INFO - Started process (PID=14144) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:35:59.674+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:35:59.675+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:35:59.675+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:35:59.987+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:35:59.993+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:36:00.012+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:36:00.012+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:36:00.158+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:36:00.158+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:36:00.169+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.499 seconds
+[2024-07-05T18:36:30.286+0000] {processor.py:161} INFO - Started process (PID=14156) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:36:30.287+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:36:30.288+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:36:30.287+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:36:30.602+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:36:30.609+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:36:30.753+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:36:30.753+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:36:30.768+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:36:30.768+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:36:30.781+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.498 seconds
+[2024-07-05T18:37:00.870+0000] {processor.py:161} INFO - Started process (PID=14168) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:37:00.870+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:37:00.871+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:37:00.871+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:37:01.185+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:37:01.191+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:37:01.214+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:37:01.214+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:37:01.233+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:37:01.233+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:37:01.245+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.378 seconds
+[2024-07-05T18:37:31.356+0000] {processor.py:161} INFO - Started process (PID=14180) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:37:31.357+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:37:31.359+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:37:31.358+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:37:31.698+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:37:31.706+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:37:31.726+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:37:31.726+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:37:31.745+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:37:31.745+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:37:31.761+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.407 seconds
+[2024-07-05T18:38:01.885+0000] {processor.py:161} INFO - Started process (PID=14192) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:38:01.886+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:38:01.887+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:38:01.887+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:38:02.336+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:38:02.342+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:38:02.362+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:38:02.362+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:38:02.384+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:38:02.384+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:38:02.398+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.515 seconds
+[2024-07-05T18:38:32.522+0000] {processor.py:161} INFO - Started process (PID=14204) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:38:32.523+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:38:32.524+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:38:32.524+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:38:32.995+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:38:33.001+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:38:33.018+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:38:33.018+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:38:33.035+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:38:33.035+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:38:33.047+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.528 seconds
+[2024-07-05T18:39:03.161+0000] {processor.py:161} INFO - Started process (PID=14216) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:39:03.162+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:39:03.162+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:39:03.162+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:39:03.474+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:39:03.481+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:39:03.501+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:39:03.501+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:39:03.643+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:39:03.642+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:39:03.655+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.496 seconds
+[2024-07-05T18:39:33.775+0000] {processor.py:161} INFO - Started process (PID=14228) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:39:33.776+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T18:39:33.777+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:39:33.777+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:39:34.103+0000] {logging_mixin.py:188} INFO - Connection to database succeeded
+[2024-07-05T18:39:34.109+0000] {processor.py:840} INFO - DAG(s) 'daily_scraping_33' retrieved from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T18:39:34.251+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:39:34.250+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-05T18:39:34.265+0000] {logging_mixin.py:188} INFO - [2024-07-05T18:39:34.265+0000] {dag.py:3834} INFO - Setting next_dagrun for daily_scraping_33 to 2024-07-05 04:00:00+00:00, run_after=2024-07-06 04:00:00+00:00
+[2024-07-05T18:39:34.278+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/daily_scraping_dag_33.py took 0.505 seconds

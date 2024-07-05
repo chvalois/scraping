@@ -2613,3 +2613,13 @@ SyntaxError: invalid syntax
 [2024-07-05T13:07:23.117+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:07:23.115+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
 [2024-07-05T13:07:25.276+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:07:25.274+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
 [2024-07-05T13:07:25.458+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:07:25.457+0000] {timeout.py:68} ERROR - Process timed out, PID: 63961
+[2024-07-05T13:07:58.154+0000] {processor.py:161} INFO - Started process (PID=64216) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:08:01.107+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:08:02.683+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:08:02.630+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:08:36.355+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:08:36.341+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:08:36.762+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:08:36.643+0000] {timeout.py:68} ERROR - Process timed out, PID: 64216
+[2024-07-05T13:09:09.444+0000] {processor.py:161} INFO - Started process (PID=64423) to work on /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:09:09.454+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_33.py for tasks to queue
+[2024-07-05T13:09:09.458+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:09.455+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_33.py
+[2024-07-05T13:09:29.880+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:29.799+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:09:40.720+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:39.473+0000] {timeout.py:68} ERROR - Process timed out, PID: 64423

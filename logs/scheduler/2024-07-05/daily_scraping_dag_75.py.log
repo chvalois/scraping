@@ -1866,3 +1866,9 @@
 [2024-07-05T13:07:42.403+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:07:42.396+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
 [2024-07-05T13:07:42.809+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:07:42.809+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
 [2024-07-05T13:07:42.997+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:07:42.997+0000] {logger.py:11} INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/126.0.6478.126/chromedriver-linux64/chromedriver] found in cache
+[2024-07-05T13:07:58.332+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:07:58.300+0000] {timeout.py:68} ERROR - Process timed out, PID: 64130
+[2024-07-05T13:08:51.947+0000] {processor.py:161} INFO - Started process (PID=64348) to work on /opt/airflow/dags/daily_scraping_dag_75.py
+[2024-07-05T13:08:51.948+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/daily_scraping_dag_75.py for tasks to queue
+[2024-07-05T13:08:51.951+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:08:51.949+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/daily_scraping_dag_75.py
+[2024-07-05T13:09:10.204+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:10.203+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-07-05T13:09:22.136+0000] {logging_mixin.py:188} INFO - [2024-07-05T13:09:22.078+0000] {timeout.py:68} ERROR - Process timed out, PID: 64348

@@ -20,8 +20,8 @@ SELECT
     /* CASE WHEN lieu = '-' THEN NULL ELSE REGEXP_SUBSTR(lieu, '\(([^)]+)\)') END AS ad_zipcode, /* Old Method */ */
     /* CASE WHEN lieu = '-' THEN NULL ELSE REGEXP_EXTRACT(lieu, r'^([^(]+)') END AS ad_city, /* For GCP */ */
     /* CASE WHEN lieu = '-' THEN NULL ELSE REGEXP_EXTRACT(lieu, r'\(([^)]+)\)') END AS ad_zipcode, /* For GCP */ */
-    INITCAP(SPLIT_PART(url, '-', -3)) AS ad_city,
-    SPLIT_PART(url, '-', -2) AS ad_zipcode,
+    SPLIT_PART(lieu, '(', 1) AS ad_city,
+    SPLIT_PART(SPLIT_PART(lieu, '(', 2), ')', 1) AS ad_zipcode,
     surface AS ad_surface,
     COALESCE(nb_chambres, 0) AS ad_nb_bedrooms,
     /* IFNULL(nb_chambres, 0) AS ad_nb_bedrooms, /* For GCP */ */

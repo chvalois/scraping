@@ -13823,3 +13823,38 @@ File Path                                   PID    Runtime      # DAGs    # Erro
 /opt/airflow/dags/daily_scraping_dag_75.py                           0          -1  0.01s           2024-07-09T15:50:53
 /opt/airflow/dags/daily_scraping_dag_33.py                           0          -1  0.01s           2024-07-09T15:50:53
 ================================================================================
+[2024-07-09T15:51:23.613+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_75.py exited with return code 1.
+[2024-07-09T15:51:23.615+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_33.py exited with return code 1.
+[2024-07-09T15:51:49.697+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           0          -1  0.01s           2024-07-09T15:51:23
+/opt/airflow/dags/daily_scraping_dag_33.py                           0          -1  0.01s           2024-07-09T15:51:23
+================================================================================
+[2024-07-09T15:51:53.722+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_75.py exited with return code 1.
+[2024-07-09T15:51:53.725+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_33.py exited with return code 1.
+[2024-07-09T15:52:19.803+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           0          -1  0.01s           2024-07-09T15:51:53
+/opt/airflow/dags/daily_scraping_dag_33.py                           0          -1  0.01s           2024-07-09T15:51:53
+================================================================================
+[2024-07-09T15:52:23.830+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_75.py exited with return code 1.
+[2024-07-09T15:52:23.833+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_33.py exited with return code 1.
+[2024-07-09T15:52:49.909+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           0          -1  0.01s           2024-07-09T15:52:23
+/opt/airflow/dags/daily_scraping_dag_33.py                           0          -1  0.01s           2024-07-09T15:52:23
+================================================================================
+[2024-07-09T15:52:53.935+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_75.py exited with return code 1.
+[2024-07-09T15:52:53.938+0000] {manager.py:1017} ERROR - Processor for /opt/airflow/dags/daily_scraping_dag_33.py exited with return code 1.

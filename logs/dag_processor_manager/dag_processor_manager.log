@@ -14224,3 +14224,207 @@ File Path                                   PID    Runtime      # DAGs    # Erro
 /opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.61s           2024-07-09T16:34:02
 /opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.50s           2024-07-09T16:34:22
 ================================================================================
+[2024-07-09T16:34:58.462+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.57s           2024-07-09T16:34:53
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.52s           2024-07-09T16:34:33
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.51s           2024-07-09T16:34:32
+================================================================================
+[2024-07-09T16:35:27.097+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2024-07-09T16:35:27.099+0000] {manager.py:741} INFO - There are 3 files in /opt/airflow/dags
+[2024-07-09T16:35:28.740+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.65s           2024-07-09T16:35:24
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.54s           2024-07-09T16:35:04
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.53s           2024-07-09T16:35:04
+================================================================================
+[2024-07-09T16:35:58.850+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.65s           2024-07-09T16:35:34
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.61s           2024-07-09T16:35:34
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.51s           2024-07-09T16:35:55
+================================================================================
+[2024-07-09T16:36:28.937+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.50s           2024-07-09T16:36:05
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.50s           2024-07-09T16:36:25
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.50s           2024-07-09T16:36:05
+================================================================================
+[2024-07-09T16:36:59.074+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.58s           2024-07-09T16:36:56
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.55s           2024-07-09T16:36:36
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.54s           2024-07-09T16:36:36
+================================================================================
+[2024-07-09T16:37:29.234+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.68s           2024-07-09T16:37:06
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.68s           2024-07-09T16:37:06
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.51s           2024-07-09T16:37:27
+================================================================================
+[2024-07-09T16:37:59.447+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.51s           2024-07-09T16:37:37
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.51s           2024-07-09T16:37:57
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.51s           2024-07-09T16:37:37
+================================================================================
+[2024-07-09T16:38:29.514+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.56s           2024-07-09T16:38:28
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.56s           2024-07-09T16:38:08
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.55s           2024-07-09T16:38:08
+================================================================================
+[2024-07-09T16:38:59.820+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.64s           2024-07-09T16:38:38
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.63s           2024-07-09T16:38:38
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.58s           2024-07-09T16:38:59
+================================================================================
+[2024-07-09T16:39:29.858+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.57s           2024-07-09T16:39:29
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.53s           2024-07-09T16:39:09
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.53s           2024-07-09T16:39:09
+================================================================================
+[2024-07-09T16:40:00.238+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.69s           2024-07-09T16:39:40
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.68s           2024-07-09T16:39:40
+/opt/airflow/dags/daily_scraping_dag_42.py   1267  0.00s             1           0  0.57s           2024-07-09T16:39:29
+================================================================================
+[2024-07-09T16:40:27.338+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2024-07-09T16:40:27.340+0000] {manager.py:741} INFO - There are 3 files in /opt/airflow/dags
+[2024-07-09T16:40:30.358+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.53s           2024-07-09T16:40:00
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.51s           2024-07-09T16:40:10
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.50s           2024-07-09T16:40:10
+================================================================================
+[2024-07-09T16:41:00.484+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.56s           2024-07-09T16:40:41
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.54s           2024-07-09T16:40:41
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.51s           2024-07-09T16:40:31
+================================================================================
+[2024-07-09T16:41:31.150+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.64s           2024-07-09T16:41:02
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.57s           2024-07-09T16:41:12
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.55s           2024-07-09T16:41:12
+================================================================================
+[2024-07-09T16:42:01.749+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.51s           2024-07-09T16:41:42
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.50s           2024-07-09T16:41:42
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.50s           2024-07-09T16:41:32
+================================================================================
+[2024-07-09T16:42:32.370+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.67s           2024-07-09T16:42:13
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.66s           2024-07-09T16:42:13
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.52s           2024-07-09T16:42:03
+================================================================================
+[2024-07-09T16:43:03.006+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.53s           2024-07-09T16:42:33
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.51s           2024-07-09T16:42:44
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.51s           2024-07-09T16:42:44
+================================================================================
+[2024-07-09T16:43:33.829+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.62s           2024-07-09T16:43:14
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.62s           2024-07-09T16:43:14
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.51s           2024-07-09T16:43:04
+================================================================================
+[2024-07-09T16:44:03.939+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.56s           2024-07-09T16:43:35
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.51s           2024-07-09T16:43:45
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.50s           2024-07-09T16:43:45
+================================================================================
+[2024-07-09T16:44:34.047+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/daily_scraping_dag_75.py                           1           0  0.54s           2024-07-09T16:44:16
+/opt/airflow/dags/daily_scraping_dag_33.py                           1           0  0.54s           2024-07-09T16:44:16
+/opt/airflow/dags/daily_scraping_dag_42.py                           1           0  0.51s           2024-07-09T16:44:05
+================================================================================

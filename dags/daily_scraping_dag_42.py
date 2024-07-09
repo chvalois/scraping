@@ -27,7 +27,7 @@ task_1 = PythonOperator(
     python_callable=daily_scraping,
     op_kwargs= {
         'dept': 42,
-        'region_dept': 'aquitaine/gironde',
+        'region_dept': 'aquitaine/landes',
         'start_date': yesterday,
         'nb_pages': "max"
     },

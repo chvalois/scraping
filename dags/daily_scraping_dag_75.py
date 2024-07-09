@@ -4,7 +4,7 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
 from functions.scraping_superimmo import daily_scraping
 from functions.inject_to_postgres import add_scraped_data_to_postgresDB
-from datetime import datetime
+from datetime import datetime, timedelta
 
 my_dag = DAG(
     dag_id='daily_scraping_75',
@@ -18,8 +18,8 @@ my_dag = DAG(
     }
 )
 
-
 today = datetime.now().strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 
 task_1 = PythonOperator(
     task_id='daily_scraping_75',
@@ -27,7 +27,7 @@ task_1 = PythonOperator(
     op_kwargs= {
         'dept': 75,
         'region_dept': 'ile-de-france/paris',
-        'start_date': today,
+        'start_date': yesterday,
         'nb_pages': "max"
     },
     dag=my_dag
@@ -38,7 +38,7 @@ task_2 = PythonOperator(
     python_callable=add_scraped_data_to_postgresDB,
     op_kwargs= {
         'dept': 75,
-        'date': today
+        'date': yesterday
     },
     dag=my_dag
 )

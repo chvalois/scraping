@@ -81,6 +81,10 @@ services:
     depends_on:
       - postgres-airflow
       - postgres-db
+    deploy:
+      resources:
+        limits:
+          memory: 8g
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow:5432/airflow
@@ -124,6 +128,8 @@ services:
       - "5434:5432"
     networks:
       - mynetwork
+    volumes:
+      - metabase_db_data:/var/lib/postgresql/data
 
   pgadmin:
     container_name: pgadmin
@@ -158,6 +164,7 @@ services:
       timeout: 5s
       retries: 5
     depends_on:
+      - postgres-metabase
       - postgres-db
     volumes:
       - metabase_data:/metabase-data
@@ -233,6 +240,7 @@ volumes:
   postgres-db-volume:
   pgadmin_data:
   metabase_data:
+  metabase_db_data:
 
 networks:
   mynetwork:

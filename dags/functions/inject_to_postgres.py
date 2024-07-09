@@ -84,6 +84,7 @@ def add_scraped_data_to_postgresDB(dept, date):
     cwd = os.getcwd()
 
     files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-34:-24] == date) & (f.split("_")[1] == str(dept))]
+    print(f"Looking for files of department {dept} and scraped on target date: {date}")
     print(files)
 
     df = pd.DataFrame()

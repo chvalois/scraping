@@ -26,8 +26,9 @@ SELECT
     COALESCE(nb_chambres, 0) AS ad_nb_bedrooms,
     /* IFNULL(nb_chambres, 0) AS ad_nb_bedrooms, /* For GCP */ */
     nb_pieces AS ad_nb_rooms,
+    SUBSTRING(SPLIT_PART(url, '-', -2), 1, 2) AS ad_department,
     CAST(REPLACE(price, ' ', '') AS INTEGER) AS ad_price,
-    CAST(REPLACE(prix_m2, ' ', '') AS INTEGER) AS ad_price_sqm,
+    CAST(ROUND(CAST(REPLACE(prix_m2, ' ', '') AS NUMERIC)) AS INTEGER) AS ad_price_sqm,
     /* CAST(REPLACE(price, ' ', '') AS INT64) AS ad_price, /* For GCP */ */
     /* CAST(REPLACE(prix_m2, ' ', '') AS INT64) AS ad_price_sqm, /* For GCP */ */
     tags AS ad_tags,

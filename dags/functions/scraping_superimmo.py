@@ -39,7 +39,11 @@ def vpn_rotate(settings):
     except:
         pass
 
+
 def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False): 
+
+
+    ### --- Setting Chromedriver for scraping --- ###
 
     user_agents = [
         # Add your list of user agents here
@@ -89,6 +93,8 @@ def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False)
             fix_hairline=True,
             )
 
+
+    ### --- Begin scraping --- ###
 
     print(f"Scraping {region_dept} ads from {start_date}")
     

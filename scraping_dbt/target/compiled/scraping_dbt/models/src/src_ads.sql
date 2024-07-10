@@ -29,8 +29,8 @@ SELECT
     date_scraped AS ad_date_scraped,
     TO_DATE(date_publication, 'DD/mm/YYYY') AS ad_published_on,
     /* PARSE_DATE("%d/%m/%Y", date_publication) AS ad_published_on, /* For GCP */ */
-    CURRENT_TIMESTAMP AS created_at,
-    CURRENT_TIMESTAMP AS updated_at 
+    created_at,
+    updated_at 
     /* CURRENT_TIMESTAMP() AS created_at,  /* For GCP */ */
     /* CURRENT_TIMESTAMP() AS updated_at  /* For GCP */ */
 FROM

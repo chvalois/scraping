@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "scraping_db"."public"."prix_m2_commune" ("zipcode" integer,"city_name" text,"house_type" text,"prix_m2" float8)
-  ;
+    truncate table "scraping_db"."public"."prix_m2_commune";
     -- dbt seed --
     
           insert into "scraping_db"."public"."prix_m2_commune" ("zipcode", "city_name", "house_type", "prix_m2") values

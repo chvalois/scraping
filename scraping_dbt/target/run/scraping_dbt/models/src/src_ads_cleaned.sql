@@ -22,7 +22,7 @@ latest_ads AS (
         ad_id
 ),
 
-duplicates AS (
+id_duplicates AS (
     SELECT
         s.*
     FROM
@@ -39,10 +39,10 @@ duplicates AS (
 SELECT * FROM src_ads
 WHERE (ad_id, updated_at) NOT IN (
     SELECT 
-        la.ad_id,
-        la.latest_updated_at
+        ad_id,
+		updated_at
     FROM   
-        latest_ads la
+        id_duplicates
 )
   );
   

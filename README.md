@@ -38,16 +38,29 @@ psql -h postgres-db -U chvalois -d scraping_db -c "ALTER TABLE src_ads_cleaned R
 ```
 # Airflow
 localhost:8080
+```
+![image](https://github.com/chvalois/scraping/assets/32735527/d4f6c108-8a4d-4027-8ab0-9f41491a97f8)
 
+```
 # Grafana 
 localhost:3001
+```
+![image](https://github.com/chvalois/scraping/assets/32735527/9aafa692-4ea0-40f4-b86f-77a11d20fdf9)
 
+```
 # Metabase
 localhost:3002
+```
+![image](https://github.com/chvalois/scraping/assets/32735527/379e1834-4298-4b9e-b302-4c6093ee8e87)
 
+
+```
 # pgAdmin
 localhost:5050
 ```
+![image](https://github.com/chvalois/scraping/assets/32735527/e4ee1a6c-6df9-4216-a807-18ac95c5f612)
+
+
 
 
 ## Data Flow

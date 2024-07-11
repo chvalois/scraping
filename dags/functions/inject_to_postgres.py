@@ -93,6 +93,7 @@ def add_scraped_data_to_postgresDB(dept, date):
         df = pd.concat([df, df_add])
 
     df['date_scraped'] = date
+    df = df.drop_duplicates(subset=['url'], keep='first')
 
     try:
         inject_sql(df)

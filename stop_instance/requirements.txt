@@ -1,0 +1,10 @@
+google-api-python-client
+pandas==2.0.3
+selenium==4.19.0
+webdriver-manager==4.0.1
+tqdm==4.66.2
+nordvpn_switcher==0.3.0
+sqlalchemy==1.4.52
+selenium_stealth==1.0.6
+dbt_core==1.8.3
+dbt_postgres==1.8.2

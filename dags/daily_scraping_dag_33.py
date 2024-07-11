@@ -13,11 +13,9 @@ my_dag = DAG(
     dag_id=f'daily_scraping_{dept}',
     description='scraps ads daily on Superimmo website',
     tags=['scraping', 'superimmo'],
-    #schedule_interval='0 0-23/4 * * *',
     schedule_interval='0 2 * * *',
     default_args={
         'owner': 'airflow',
-#        'start_date': days_ago(0, minute=1),
         'start_date': days_ago(1),
     }
 )
@@ -28,6 +26,8 @@ yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 task_1 = PythonOperator(
     task_id=f'daily_scraping_{dept}',
     python_callable=daily_scraping,
+    retries=2,
+    retry_delay=timedelta (seconds=30),
     op_kwargs= {
         'dept': dept,
         'region_dept': region_dept,
@@ -49,6 +49,8 @@ task_2 = PythonOperator(
 
 task_3 = BashOperator(
     task_id='run_dbt',
+    retries=2,
+    retry_delay=timedelta (seconds=30),
     bash_command='cd /opt/airflow/scraping_dbt && dbt run --profiles-dir /opt/airflow/dbt_profiles',
 )
 

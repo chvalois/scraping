@@ -88,8 +88,11 @@ def get_details(url, driver):
     # Recherche du prix de vente
     try:
         price = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[2]/section[1]/table/tbody/tr/td[1]').text
-        price = re.findall(r'Prix de vente : (\d* *\d+ \d+) €', price)[0]
-        price = int(price.replace(" ", ""))
+        if re.search(r"vente", price):
+            price = re.findall(r'Prix de vente : (\d* *\d+ \d+) €', price)[0]
+            price = int(price.replace(" ", ""))
+        else:
+            price = ''
     except:
         pass
 

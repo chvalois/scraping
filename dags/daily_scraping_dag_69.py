@@ -6,8 +6,8 @@ from functions.scraping_superimmo import daily_scraping
 from functions.inject_to_postgres import add_scraped_data_to_postgresDB
 from datetime import datetime, timedelta
 
-dept = 75
-region_dept = 'ile-de-france/paris'
+dept = 69
+region_dept = 'rhone-alpes/rhone'
 
 my_dag = DAG(
     dag_id=f'daily_scraping_{dept}',

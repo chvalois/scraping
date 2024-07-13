@@ -6,14 +6,14 @@ from functions.scraping_superimmo import daily_scraping
 from functions.inject_to_postgres import add_scraped_data_to_postgresDB
 from datetime import datetime, timedelta
 
-dept = 75
-region_dept = 'ile-de-france/paris'
+dept = 67
+region_dept = 'alsace/bas-rhin'
 
 my_dag = DAG(
     dag_id=f'daily_scraping_{dept}',
     description='scraps ads daily on Superimmo website',
     tags=['scraping', 'superimmo'],
-    schedule_interval='40 2 * * *',
+    schedule_interval='30 2 * * *',
     default_args={
         'owner': 'airflow',
         'start_date': days_ago(1),

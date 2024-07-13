@@ -13,7 +13,7 @@ my_dag = DAG(
     dag_id=f'daily_scraping_{dept}',
     description='scraps ads daily on Superimmo website',
     tags=['scraping', 'superimmo'],
-    schedule_interval='0 2 * * *',
+    schedule_interval='20 2 * * *',
     default_args={
         'owner': 'airflow',
         'start_date': days_ago(1),

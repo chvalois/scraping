@@ -1,300 +1,0 @@
-[2024-07-05T13:01:38.295+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_scraping_75.daily_scraping_75 manual__2024-07-05T13:01:36.214917+00:00 [queued]>
-[2024-07-05T13:01:38.303+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_scraping_75.daily_scraping_75 manual__2024-07-05T13:01:36.214917+00:00 [queued]>
-[2024-07-05T13:01:38.303+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
-[2024-07-05T13:01:38.318+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): daily_scraping_75> on 2024-07-05 13:01:36.214917+00:00
-[2024-07-05T13:01:38.324+0000] {standard_task_runner.py:60} INFO - Started process 60712 to run task
-[2024-07-05T13:01:38.326+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_scraping_75', 'daily_scraping_75', 'manual__2024-07-05T13:01:36.214917+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/daily_scraping_dag_75.py', '--cfg-path', '/tmp/tmp83z6afj1']
-[2024-07-05T13:01:38.328+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask daily_scraping_75
-[2024-07-05T13:01:38.341+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
-[2024-07-05T13:01:38.371+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_scraping_75.daily_scraping_75 manual__2024-07-05T13:01:36.214917+00:00 [running]> on host 596f6ace9042
-[2024-07-05T13:01:38.430+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_scraping_75' AIRFLOW_CTX_TASK_ID='daily_scraping_75' AIRFLOW_CTX_EXECUTION_DATE='2024-07-05T13:01:36.214917+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-05T13:01:36.214917+00:00'
-[2024-07-05T13:01:38.431+0000] {logging_mixin.py:188} INFO - Scraping ile-de-france/paris ads from 2024-07-05
-[2024-07-05T13:01:44.459+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/299 [00:00<?, ?it/s]
-[2024-07-05T13:01:44.945+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/15 [00:00<?, ?it/s]
-[2024-07-05T13:01:44.946+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:01:48.770+0000] {logging_mixin.py:188} WARNING -   7%|6         | 1/15 [00:03<00:53,  3.82s/it]
-[2024-07-05T13:01:48.770+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:01:51.650+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 2/15 [00:06<00:42,  3.27s/it]
-[2024-07-05T13:01:51.650+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:01:56.793+0000] {logging_mixin.py:188} WARNING -  20%|##        | 3/15 [00:11<00:49,  4.12s/it]
-[2024-07-05T13:01:56.793+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:01.311+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 4/15 [00:16<00:47,  4.28s/it]
-[2024-07-05T13:02:01.312+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:05.290+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 5/15 [00:20<00:41,  4.17s/it]
-[2024-07-05T13:02:05.291+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:09.383+0000] {logging_mixin.py:188} WARNING -  40%|####      | 6/15 [00:24<00:37,  4.14s/it]
-[2024-07-05T13:02:09.384+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:12.787+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 7/15 [00:27<00:31,  3.90s/it]
-[2024-07-05T13:02:12.787+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:16.426+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 8/15 [00:31<00:26,  3.82s/it]
-[2024-07-05T13:02:16.428+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:20.595+0000] {logging_mixin.py:188} WARNING -  60%|######    | 9/15 [00:35<00:23,  3.93s/it]
-[2024-07-05T13:02:20.595+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:24.253+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 10/15 [00:39<00:19,  3.84s/it]
-[2024-07-05T13:02:24.254+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:26.757+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 11/15 [00:41<00:13,  3.43s/it]
-[2024-07-05T13:02:26.757+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:30.172+0000] {logging_mixin.py:188} WARNING -  80%|########  | 12/15 [00:45<00:10,  3.43s/it]
-[2024-07-05T13:02:30.172+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:35.224+0000] {logging_mixin.py:188} WARNING -  87%|########6 | 13/15 [00:50<00:07,  3.92s/it]
-[2024-07-05T13:02:35.226+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:38.818+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 14/15 [00:53<00:03,  3.82s/it]
-[2024-07-05T13:02:38.818+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING - 100%|##########| 15/15 [00:56<00:00,  3.41s/it]
-[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING -                                                
-[2024-07-05T13:02:41.279+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:41.289+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/299 [00:56<4:42:15, 56.83s/it]
-[2024-07-05T13:02:41.965+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/15 [00:00<?, ?it/s]
-[2024-07-05T13:02:41.966+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:45.067+0000] {logging_mixin.py:188} WARNING -   7%|6         | 1/15 [00:03<00:43,  3.10s/it]
-[2024-07-05T13:02:45.068+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:51.023+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 2/15 [00:09<01:02,  4.78s/it]
-[2024-07-05T13:02:51.024+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:02:55.756+0000] {logging_mixin.py:188} WARNING -  20%|##        | 3/15 [00:13<00:57,  4.76s/it]
-[2024-07-05T13:02:55.756+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:03:06.866+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 4/15 [00:24<01:19,  7.26s/it]
-[2024-07-05T13:03:06.867+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:03:24.090+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 5/15 [00:42<01:48, 10.85s/it]
-[2024-07-05T13:03:24.091+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:03:34.552+0000] {logging_mixin.py:188} WARNING -  40%|####      | 6/15 [00:52<01:36, 10.73s/it]
-[2024-07-05T13:03:34.553+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:03:52.053+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 7/15 [01:10<01:43, 12.94s/it]
-[2024-07-05T13:03:52.054+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:03:56.529+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 8/15 [01:14<01:11, 10.25s/it]
-[2024-07-05T13:03:56.530+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:04:00.757+0000] {logging_mixin.py:188} WARNING -  60%|######    | 9/15 [01:18<00:50,  8.37s/it]
-[2024-07-05T13:04:00.759+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:04:17.310+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 10/15 [01:35<00:54, 10.89s/it]
-[2024-07-05T13:04:17.335+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:04:51.842+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 11/15 [02:09<01:12, 18.13s/it]
-[2024-07-05T13:04:51.843+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:05:53.568+0000] {logging_mixin.py:188} WARNING -  80%|########  | 12/15 [03:11<01:34, 31.37s/it]
-[2024-07-05T13:05:53.586+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:07:18.895+0000] {logging_mixin.py:188} WARNING -  87%|########6 | 13/15 [04:36<01:35, 47.73s/it]
-[2024-07-05T13:07:18.896+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:08:50.509+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 14/15 [06:08<01:00, 60.99s/it]
-[2024-07-05T13:08:50.511+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:09:53.187+0000] {logging_mixin.py:188} WARNING - 100%|##########| 15/15 [07:11<00:00, 61.50s/it]
-[2024-07-05T13:09:53.188+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:09:53.189+0000] {logging_mixin.py:188} WARNING -                                                
-[2024-07-05T13:09:53.189+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:09:53.193+0000] {logging_mixin.py:188} WARNING -   1%|          | 2/299 [08:08<22:53:26, 277.46s/it]
-[2024-07-05T13:09:54.135+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/15 [00:00<?, ?it/s]
-[2024-07-05T13:09:54.135+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:10:52.814+0000] {logging_mixin.py:188} WARNING -   7%|6         | 1/15 [00:58<13:41, 58.68s/it]
-[2024-07-05T13:10:52.816+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:11:05.827+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 2/15 [01:11<06:53, 31.80s/it]
-[2024-07-05T13:11:05.850+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:12:01.513+0000] {logging_mixin.py:188} WARNING -  20%|##        | 3/15 [02:07<08:32, 42.72s/it]
-[2024-07-05T13:12:01.514+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:12:56.106+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 4/15 [03:01<08:41, 47.41s/it]
-[2024-07-05T13:12:56.107+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:14:28.360+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 5/15 [04:34<10:35, 63.58s/it]
-[2024-07-05T13:14:28.363+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:15:46.397+0000] {logging_mixin.py:188} WARNING -  40%|####      | 6/15 [05:52<10:16, 68.50s/it]
-[2024-07-05T13:15:46.400+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:16:36.401+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 7/15 [06:42<08:19, 62.45s/it]
-[2024-07-05T13:16:36.402+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:18:07.369+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 8/15 [08:13<08:20, 71.51s/it]
-[2024-07-05T13:18:07.425+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:21:06.364+0000] {logging_mixin.py:188} WARNING -  60%|######    | 9/15 [11:12<10:30, 105.13s/it]
-[2024-07-05T13:21:06.365+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:22:46.233+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 10/15 [12:52<08:37, 103.50s/it]
-[2024-07-05T13:22:46.235+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:23:59.380+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 11/15 [14:05<06:16, 94.22s/it] 
-[2024-07-05T13:23:59.382+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:24:57.029+0000] {logging_mixin.py:188} WARNING -  80%|########  | 12/15 [15:02<04:09, 83.09s/it]
-[2024-07-05T13:24:57.030+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:25:20.472+0000] {logging_mixin.py:188} WARNING -  87%|########6 | 13/15 [15:26<02:10, 65.02s/it]
-[2024-07-05T13:25:20.474+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:26:31.289+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 14/15 [16:37<01:06, 66.77s/it]
-[2024-07-05T13:26:31.290+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:28:22.830+0000] {logging_mixin.py:188} WARNING - 100%|##########| 15/15 [18:28<00:00, 80.26s/it]
-[2024-07-05T13:28:22.833+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:28:22.834+0000] {logging_mixin.py:188} WARNING -                                                
-[2024-07-05T13:28:22.834+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:28:22.855+0000] {logging_mixin.py:188} WARNING -   1%|1         | 3/299 [26:38<54:03:28, 657.46s/it]
-[2024-07-05T13:29:16.823+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/15 [00:00<?, ?it/s]
-[2024-07-05T13:29:16.825+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:31:46.656+0000] {job.py:213} ERROR - Job heartbeat got an exception
-Traceback (most recent call last):
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
-    return fn()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
-    return _ConnectionFairy._checkout(self)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
-    fairy = _ConnectionRecord.checkout(pool)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
-    rec = pool._do_get()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
-    return self._create_connection()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
-    return _ConnectionRecord(self)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
-    self.__connect()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
-    pool.logger.debug("Error on connect(): %s", e)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
-    raise exception
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
-    self.dbapi_connection = connection = pool._invoke_creator(self)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
-    return dialect.connect(*cargs, **cparams)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
-    return self.dbapi.connect(*cargs, **cparams)
-  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-psycopg2.OperationalError: connection to server at "postgres-***" (172.21.0.6), port 5432 failed: server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/job.py", line 208, in heartbeat
-    heartbeat_callback(session)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
-    return func(*args, **kwargs)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/local_task_job_runner.py", line 252, in heartbeat_callback
-    self.task_instance.refresh_from_db()
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
-    return func(*args, session=session, **kwargs)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1748, in refresh_from_db
-    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 475, in _refresh_from_db
-    ti = TaskInstance.get_task_instance(
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
-    return func(*args, **kwargs)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
-    return func(*args, **kwargs)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1734, in get_task_instance
-    return query.one_or_none()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
-    return self._iter().one_or_none()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
-    result = self.session.execute(
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
-    conn = self._connection_for_bind(bind)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
-    return self._transaction._connection_for_bind(
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
-    conn = bind.connect()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
-    return super(Engine, self).connect()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
-    return self._connection_cls(self, close_with_result=close_with_result)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
-    else engine.raw_connection()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
-    return self._wrap_pool_connect(self.pool.connect, _connection)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
-    Connection._handle_dbapi_exception_noconnection(
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
-    util.raise_(
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
-    raise exception
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
-    return fn()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
-    return _ConnectionFairy._checkout(self)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
-    fairy = _ConnectionRecord.checkout(pool)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
-    rec = pool._do_get()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
-    return self._create_connection()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
-    return _ConnectionRecord(self)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
-    self.__connect()
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
-    pool.logger.debug("Error on connect(): %s", e)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
-    raise exception
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
-    self.dbapi_connection = connection = pool._invoke_creator(self)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
-    return dialect.connect(*cargs, **cparams)
-  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
-    return self.dbapi.connect(*cargs, **cparams)
-  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres-***" (172.21.0.6), port 5432 failed: server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-[2024-07-05T13:31:55.419+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
-[2024-07-05T13:31:59.609+0000] {logging_mixin.py:188} WARNING -   7%|6         | 1/15 [02:42<37:58, 162.77s/it]
-[2024-07-05T13:31:59.611+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:33:43.537+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 2/15 [04:26<27:45, 128.15s/it]
-[2024-07-05T13:33:43.538+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:34:00.530+0000] {logging_mixin.py:188} WARNING -  20%|##        | 3/15 [04:43<15:28, 77.40s/it] 
-[2024-07-05T13:34:00.531+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:35:03.099+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 4/15 [05:46<13:06, 71.53s/it]
-[2024-07-05T13:35:03.102+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:36:58.295+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 5/15 [07:41<14:32, 87.29s/it]
-[2024-07-05T13:36:58.304+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:39:41.974+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
-[2024-07-05T13:39:52.661+0000] {logging_mixin.py:188} WARNING -  40%|####      | 6/15 [10:35<17:31, 116.88s/it]
-[2024-07-05T13:39:52.709+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:39:56.422+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to None. Terminating instance.
-[2024-07-05T13:39:57.163+0000] {process_utils.py:131} INFO - Sending 15 to group 60712. PIDs of all processes in the group: [60712]
-[2024-07-05T13:39:57.164+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 60712
-[2024-07-05T13:39:57.165+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
-[2024-07-05T13:39:57.165+0000] {logging_mixin.py:188} WARNING -                                                
-[2024-07-05T13:39:57.170+0000] {logging_mixin.py:188} WARNING - 
-[2024-07-05T13:39:57.206+0000] {logging_mixin.py:188} WARNING -   1%|1         | 3/299 [38:12<62:50:14, 764.24s/it]
-[2024-07-05T13:39:57.256+0000] {taskinstance.py:2731} ERROR - Task failed with exception
-Traceback (most recent call last):
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
-    result = _execute_callable(context=context, **execute_callable_kwargs)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
-    return execute_callable(context=context, **execute_callable_kwargs)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
-    return_value = self.execute_callable()
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
-    return self.python_callable(*self.op_args, **self.op_kwargs)
-  File "/opt/airflow/dags/functions/scraping_superimmo.py", line 145, in daily_scraping
-    driver.get(pages_url)
-  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 356, in get
-    self.execute(Command.GET, {"url": url})
-  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
-    response = self.command_executor.execute(driver_command, params)
-  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/remote/remote_connection.py", line 302, in execute
-    return self._request(command_info[0], url, body=data)
-  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/remote/remote_connection.py", line 322, in _request
-    response = self._conn.request(method, url, body=body, headers=headers)
-  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/request.py", line 81, in request
-    return self.request_encode_body(
-  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/request.py", line 173, in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/poolmanager.py", line 376, in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 715, in urlopen
-    httplib_response = self._make_request(
-  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
-    six.raise_from(e, None)
-  File "<string>", line 3, in raise_from
-  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 462, in _make_request
-    httplib_response = conn.getresponse()
-  File "/usr/local/lib/python3.8/http/client.py", line 1348, in getresponse
-    response.begin()
-  File "/usr/local/lib/python3.8/http/client.py", line 316, in begin
-    version, status, reason = self._read_status()
-  File "/usr/local/lib/python3.8/http/client.py", line 277, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/usr/local/lib/python3.8/socket.py", line 669, in readinto
-    return self._sock.recv_into(b)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2485, in signal_handler
-    raise AirflowException("Task received SIGTERM signal")
-airflow.exceptions.AirflowException: Task received SIGTERM signal
-[2024-07-05T13:39:58.243+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=daily_scraping_75, task_id=daily_scraping_75, execution_date=20240705T130136, start_date=20240705T130138, end_date=20240705T133958
-[2024-07-05T13:39:58.649+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 15 for task daily_scraping_75 (Task received SIGTERM signal; 60712)
-[2024-07-05T13:39:58.717+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=60712, status='terminated', exitcode=1, started='13:01:37') (60712) terminated with exit code 1

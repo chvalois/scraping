@@ -112,6 +112,8 @@ services:
       - .env
     ports:
       - "5433:5432"
+    volumes:
+      - postgres_db_data:/var/lib/postgresql/data
     command: ["postgres", "-c", "wal_level=logical"]
     networks:
       - mynetwork
@@ -124,6 +126,8 @@ services:
       POSTGRES_USER: metabase
       POSTGRES_DB: metabase
       POSTGRES_PASSWORD: metabase
+    depends_on:
+      - postgres-db
     ports:
       - "5434:5432"
     networks:
@@ -237,10 +241,11 @@ services:
       - ./grafana/datasources/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
 
 volumes:
-  postgres-db-volume:
+  postgres-db-volume:  # Airflow Postgres
   pgadmin_data:
   metabase_data:
   metabase_db_data:
+  postgres_db_data:
 
 networks:
   mynetwork:

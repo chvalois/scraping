@@ -6,7 +6,7 @@ WITH src_ads AS (
 
 existing_ads AS (
     SELECT * FROM "scraping_db"."public"."src_ads"
-    WHERE True
+    WHERE False
 ),
 
 new_or_updated_ads AS (
@@ -31,5 +31,5 @@ new_or_updated_ads AS (
 SELECT * 
 FROM new_or_updated_ads
 /*WHERE 
-    NOT True           
+    NOT False           
     OR ad_id IS NULL */

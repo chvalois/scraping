@@ -8,8 +8,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium_stealth import stealth
 
 from functions.scraping_superimmo_functions import get_details
-#from scraping_superimmo_functions import get_details
 
+import os
 import re
 import pandas as pd
 
@@ -130,6 +130,15 @@ def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False)
 
     ind = 0
 
+    # Create directories for files
+    save_dir = f'files/{str(dept)}/{start_date}'
+    if not os.path.exists(f'files/{str(dept)}'):
+        os.makedirs(f'files/{str(dept)}')
+            
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+
     for page in tqdm(range(1, max_pages)):
 
         if use_vpn == True:
@@ -164,7 +173,8 @@ def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False)
             time.sleep(3)
 
         try:
-            df.to_csv(f'files/df_{dept}_{region_dept_alphanum}_{start_date}_{scraping_dt}.csv', sep = ";")
+            df.to_csv(f'files/{str(dept)}/{start_date}/df_{dept}_{region_dept_alphanum}_{start_date}_{scraping_dt}.csv', sep = ";")
+            
         except Exception as err:
             print(f"Unexpected {err=}, {type(err)=}")
             raise

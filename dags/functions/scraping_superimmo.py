@@ -168,7 +168,12 @@ def daily_scraping(dept, region_dept, start_date, nb_pages="max", use_vpn=False)
                                             'tag_3': tag_3, 'description': description, 
                                             'tags': [tags], 'images_url': [images_url]})
 
-            df = pd.concat([df, new_row], ignore_index = True)
+            try:
+                int(new_row['price'])
+                df = pd.concat([df, new_row], ignore_index = True)
+            except:
+                print(f"{url} was ignored because price was not correctly formatted")
+                pass
 
             time.sleep(3)
 

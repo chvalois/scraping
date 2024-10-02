@@ -89,13 +89,13 @@ def get_details(url, driver):
     try:
         price = driver.find_element(By.XPATH, '/html/body/main/div[2]/div[2]/section[1]/table/tbody/tr/td[1]').text
         if re.search(r"vente", price):
-            price = re.findall(r'Prix de vente : (\d* *\d+ \d+) €', price)[0]
+            price = re.findall(r'Prix de vente : (\d* *\d+ \d+)[,0-9]* €', price)[0]
             price = int(price.replace(" ", ""))
         else:
             price = ''
     except:
         pass
-
+ 
     # Etude de chaque bloc en-dessous de l'image principale de l'annonce
     for xpath in ['/html/body/main/div[2]/div[1]/div[2]/div[2]/div/h1/div/div[1]',
                   '/html/body/main/div[2]/div[1]/div[1]/div[2]/div/h1/div/div[1]',

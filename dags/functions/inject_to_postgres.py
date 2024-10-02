@@ -82,14 +82,16 @@ def add_scraped_data_to_postgresDB(dept, date):
     """
     
     cwd = os.getcwd()
+    print("Current directory:", cwd)
 
-    files = [f for f in os.listdir(os.path.join(cwd, 'files')) if (f.endswith('.csv')) & (f[-34:-24] == date) & (f.split("_")[1] == str(dept))]
+    files = [f for f in os.listdir(os.path.join(cwd, f'files/{str(dept)}/{date}')) if (f.endswith('.csv')) & (f[-34:-24] == date) & (f.split("_")[1] == str(dept))]
+    
     print(f"Looking for files of department {dept} and scraped on target date: {date}")
     print(files)
 
     df = pd.DataFrame()
     for file in files:
-        df_add = pd.read_csv(f'files/{file}', sep = ";", index_col = 0)
+        df_add = pd.read_csv(f'files/{str(dept)}/{date}/{file}', sep = ";", index_col = 0)
         df = pd.concat([df, df_add])
 
     df['date_scraped'] = date
